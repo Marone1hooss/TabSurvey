@@ -7,18 +7,20 @@ from models import str2model
 from utils.load_data import load_data
 from utils.scorer import get_scorer
 from utils.timer import Timer
+from utils.energieTracker import EnergyTracker
 from utils.io_utils import save_results_to_file, save_hyperparameters_to_file, save_loss_to_file
 from utils.parser import get_parser, get_given_parameters_parser
 
 from sklearn.model_selection import KFold, StratifiedKFold  # , train_test_split
 
 
-def cross_validation(model, X, y, args, save_model=False):
+def cross_validation(model, X, y, args, save_model=True):
     # Record some statistics and metrics
     sc = get_scorer(args)
     train_timer = Timer()
     test_timer = Timer()
-
+    train_energy= EnergyTracker()
+    test_energy= EnergyTracker()
     if args.objective == "regression":
         kf = KFold(n_splits=args.num_splits, shuffle=args.shuffle, random_state=args.seed)
     elif args.objective == "classification" or args.objective == "binary":
@@ -38,12 +40,15 @@ def cross_validation(model, X, y, args, save_model=False):
 
         # Train model
         train_timer.start()
+        train_energy.start_tracking()
         loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
         train_timer.end()
-
+        train_energy.end_tracking()
         # Test model
         test_timer.start()
+        test_energy.start_tracking()
         curr_model.predict(X_test)
+        test_energy.end_tracking()
         test_timer.end()
 
         # Save model weights and the truth/prediction pairs for traceability
@@ -59,7 +64,7 @@ def cross_validation(model, X, y, args, save_model=False):
         print(sc.get_results())
 
     # Best run is saved to file
-    if save_model:
+    if True:
         print("Results:", sc.get_results())
         print("Train time:", train_timer.get_average_time())
         print("Inference time:", test_timer.get_average_time())
@@ -67,9 +72,9 @@ def cross_validation(model, X, y, args, save_model=False):
         # Save the all statistics to a file
         save_results_to_file(args, sc.get_results(),
                              train_timer.get_average_time(), test_timer.get_average_time(),
-                             model.params)
+                             model.params,train_energy.get_average_energy(),test_energy.get_average_energy())
 
-    # print("Finished cross validation")
+    print("Finished cross validation")
     return sc, (train_timer.get_average_time(), test_timer.get_average_time())
 
 

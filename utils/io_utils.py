@@ -47,8 +47,8 @@ def save_results_to_json_file(args, jsondict, resultsname, append=True):
     json.dump(jsondict, open(filename, "w"))
 
 
-def save_results_to_file(args, results, train_time=None, test_time=None, best_params=None):
-    filename = get_output_path(args, filename="results", file_type="txt")
+def save_results_to_file(args, results, train_time=None, test_time=None, best_params=None,train_energy=None,test_energy=None):
+    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/output1.txt"
 
     with open(filename, "a") as text_file:
         text_file.write(str(datetime.datetime.now()) + "\n")
@@ -56,15 +56,16 @@ def save_results_to_file(args, results, train_time=None, test_time=None, best_pa
 
         for key, value in results.items():
             text_file.write("%s: %.5f\n" % (key, value))
-
         if train_time:
             text_file.write("\nTrain time: %f\n" % train_time)
-
         if test_time:
             text_file.write("Test time: %f\n" % test_time)
-
         if best_params:
             text_file.write("\nBest Parameters: %s\n\n\n" % best_params)
+        if train_energy :
+            text_file.write("Train energy: %f\n" % train_energy)
+        if test_energy :
+            text_file.write("Test energy: %f\n" % test_energy)
 
 
 def save_hyperparameters_to_file(args, params, results, time=None):
