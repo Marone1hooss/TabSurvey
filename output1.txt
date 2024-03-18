@@ -1,0 +1,116 @@
+2024-03-18 13:38:49.702718
+SAINT - Adult
+
+Log Loss - mean: 0.31007
+Log Loss - std: 0.00659
+AUC - mean: 0.91310
+AUC - std: 0.00433
+Accuracy - mean: 0.85495
+Accuracy - std: 0.00461
+F1 score - mean: 0.85495
+F1 score - std: 0.00461
+
+Train time: 33.601493
+Test time: 0.575737
+
+Best Parameters: {'dim': 32, 'depth': 1, 'heads': 2, 'dropout': 0.6}
+
+
+Train energy: 1413080562.400000
+Test energy: 29975961.200000
+2024-03-18 13:39:00.263842
+RandomForest - Adult
+
+Log Loss - mean: 0.29969
+Log Loss - std: 0.00689
+AUC - mean: 0.91766
+AUC - std: 0.00498
+Accuracy - mean: 0.86164
+Accuracy - std: 0.00562
+F1 score - mean: 0.86164
+F1 score - std: 0.00562
+
+Train time: 3.831811
+Test time: 0.228856
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 85}
+
+
+Train energy: 23315675.200000
+Test energy: 2861406.200000
+2024-03-18 13:39:12.373139
+LinearModel - Adult
+
+Log Loss - mean: 0.38448
+Log Loss - std: 0.00568
+AUC - mean: 0.85329
+AUC - std: 0.00443
+Accuracy - mean: 0.82442
+Accuracy - std: 0.00309
+F1 score - mean: 0.82442
+F1 score - std: 0.00309
+
+Train time: 0.089810
+Test time: 0.010668
+Train energy: 45674053.200000
+Test energy: 488206.800000
+2024-03-18 13:39:35.612171
+LightGBM - Adult
+
+Log Loss - mean: 0.52383
+Log Loss - std: 0.00407
+AUC - mean: 0.89814
+AUC - std: 0.00399
+Accuracy - mean: 0.75919
+Accuracy - std: 0.00005
+F1 score - mean: 0.75919
+F1 score - std: 0.00005
+
+Train time: 0.065972
+Test time: 0.003693
+
+Best Parameters: {'num_leaves': 24, 'lambda_l2': 0.00015, 'lambda_l1': 6.1e-05, 'learning_rate': 0.024, 'verbosity': -1, 'objective': 'binary', 'metric': 'auc'}
+
+
+Train energy: 2701738.600000
+Test energy: 150561.000000
+2024-03-18 13:40:27.773817
+KNN - Adult
+
+Log Loss - mean: 0.47146
+Log Loss - std: 0.03056
+AUC - mean: 0.86363
+AUC - std: 0.00373
+Accuracy - mean: 0.82187
+Accuracy - std: 0.00552
+F1 score - mean: 0.82187
+F1 score - std: 0.00552
+
+Train time: 0.022634
+Test time: 53.030980
+
+Best Parameters: {'n_neighbors': 25}
+
+
+Train energy: 1184750.000000
+Test energy: 120942781.200000
+2024-03-18 14:42:07.077760
+DeepGBM - Adult
+
+Log Loss - mean: 0.35362
+Log Loss - std: 0.00832
+AUC - mean: 0.91085
+AUC - std: 0.00476
+Accuracy - mean: 0.84641
+Accuracy - std: 0.00508
+F1 score - mean: 0.84641
+F1 score - std: 0.00508
+
+Train time: 397.490554
+Test time: 0.630144
+
+Best Parameters: {'n_trees': 200, 'maxleaf': 64, 'loss_de': 10, 'loss_dr': 0.7}
+
+
+Train energy: 4403935112.600000
+Test energy: 7189739.800000

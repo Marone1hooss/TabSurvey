@@ -103,7 +103,7 @@ class ModelInterpreter(object):
         # n_feature = 256
         for idx, features in enumerate(self.featurelist):
             vectors[idx] = set(features[np.where(features > 0)])
-        keys = random.sample(vectors.keys(), len(vectors))
+        keys = random.sample(list(vectors.keys()), len(vectors))
         clusterIdx = np.zeros(len(vectors))
         groups = [[] for i in range(n_clusters)]
         trees_per_cluster = len(vectors) // n_clusters

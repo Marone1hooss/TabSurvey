@@ -8,7 +8,7 @@ From: continuumio/miniconda3
     export SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL=True
 
     # Install Jupyter notebook
-     conda install jupyter -y
+    conda install jupyter -y
     mkdir /opt/notebooks
 
     # Generate Jupyter notebook config
