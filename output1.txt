@@ -114,3 +114,511 @@ Best Parameters: {'n_trees': 200, 'maxleaf': 64, 'loss_de': 10, 'loss_dr': 0.7}
 
 Train energy: 4403935112.600000
 Test energy: 7189739.800000
+2024-03-18 14:46:39.782726
+XGBoost - Adult
+
+Log Loss - mean: 0.61134
+Log Loss - std: 0.00088
+AUC - mean: 0.88949
+AUC - std: 0.00660
+Accuracy - mean: 0.85277
+Accuracy - std: 0.00448
+F1 score - mean: 0.85277
+F1 score - std: 0.00448
+
+Train time: 3.735497
+Test time: 0.437983
+
+Best Parameters: {'max_depth': 5, 'lambda': 0.354, 'alpha': 0.132, 'eta': 0.054, 'verbosity': 1, 'objective': 'binary:logistic', 'eval_metric': 'auc'}
+
+
+Train energy: 10797579.800000
+Test energy: 1160397.400000
+2024-03-18 14:47:28.117317
+RLN - Adult
+
+Log Loss - mean: 0.51296
+Log Loss - std: 0.05151
+AUC - mean: 0.69260
+AUC - std: 0.11910
+Accuracy - mean: 0.75919
+Accuracy - std: 0.00005
+F1 score - mean: 0.75919
+F1 score - std: 0.00005
+
+Train time: 7.385326
+Test time: 0.091235
+
+Best Parameters: {'layers': 5, 'theta': -12, 'log_lr': 5, 'norm': 2}
+
+
+Train energy: 269548895.200000
+Test energy: 4722632.000000
+2024-03-18 14:58:56.270149
+MLP - Adult
+
+Log Loss - mean: 0.32251
+Log Loss - std: 0.00831
+AUC - mean: 0.90402
+AUC - std: 0.00506
+Accuracy - mean: 0.84887
+Accuracy - std: 0.00628
+F1 score - mean: 0.84887
+F1 score - std: 0.00628
+
+Train time: 25.680665
+Test time: 0.041694
+
+Best Parameters: {'hidden_dim': 47, 'n_layers': 4, 'learning_rate': 0.00084}
+
+
+Train energy: 1541777571.400000
+Test energy: 5177538.400000
+2024-03-18 15:01:52.561710
+RandomForest - Adult
+
+Log Loss - mean: 0.30031
+Log Loss - std: 0.00712
+AUC - mean: 0.91762
+AUC - std: 0.00522
+Accuracy - mean: 0.86125
+Accuracy - std: 0.00548
+F1 score - mean: 0.86125
+F1 score - std: 0.00548
+
+Train time: 3.709443
+Test time: 0.228737
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 85}
+
+
+Train energy: 23778161.800000
+Test energy: 3076042.000000
+2024-03-18 15:32:49.506058
+SAINT - Adult
+
+Log Loss - mean: 0.30688
+Log Loss - std: 0.00598
+AUC - mean: 0.91373
+AUC - std: 0.00381
+Accuracy - mean: 0.85587
+Accuracy - std: 0.00592
+F1 score - mean: 0.85587
+F1 score - std: 0.00592
+
+Train time: 43.783170
+Test time: 0.824604
+
+Best Parameters: {'dim': 32, 'depth': 1, 'heads': 2, 'dropout': 0.6}
+
+
+Train energy: 4026288716.400000
+Test energy: 156391128.000000
+2024-03-18 15:33:05.834818
+RandomForest - Adult
+
+Log Loss - mean: 0.30006
+Log Loss - std: 0.00693
+AUC - mean: 0.91768
+AUC - std: 0.00501
+Accuracy - mean: 0.86177
+Accuracy - std: 0.00518
+F1 score - mean: 0.86177
+F1 score - std: 0.00518
+
+Train time: 1.626932
+Test time: 0.081709
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 85}
+
+
+Train energy: 119572545.200000
+Test energy: 6030563.400000
+2024-03-18 15:33:15.219040
+LinearModel - Adult
+
+Log Loss - mean: 0.38448
+Log Loss - std: 0.00568
+AUC - mean: 0.85329
+AUC - std: 0.00443
+Accuracy - mean: 0.82442
+Accuracy - std: 0.00309
+F1 score - mean: 0.82442
+F1 score - std: 0.00309
+
+Train time: 0.199533
+Test time: 0.004463
+Train energy: 14926463.200000
+Test energy: 306005.000000
+2024-03-18 15:33:38.910224
+LightGBM - Adult
+
+Log Loss - mean: 0.52383
+Log Loss - std: 0.00407
+AUC - mean: 0.89814
+AUC - std: 0.00399
+Accuracy - mean: 0.75919
+Accuracy - std: 0.00005
+F1 score - mean: 0.75919
+F1 score - std: 0.00005
+
+Train time: 0.081326
+Test time: 0.005017
+
+Best Parameters: {'num_leaves': 24, 'lambda_l2': 0.00015, 'lambda_l1': 6.1e-05, 'learning_rate': 0.024, 'verbosity': -1, 'objective': 'binary', 'metric': 'auc'}
+
+
+Train energy: 6319039.000000
+Test energy: 388964.000000
+2024-03-18 15:34:01.375693
+SAINT - Adult
+
+Log Loss - mean: 0.30801
+Log Loss - std: 0.00555
+AUC - mean: 0.91333
+AUC - std: 0.00349
+Accuracy - mean: 0.85553
+Accuracy - std: 0.00549
+F1 score - mean: 0.85553
+F1 score - std: 0.00549
+
+Train time: 43.478037
+Test time: 0.804846
+
+Best Parameters: {'dim': 32, 'depth': 1, 'heads': 2, 'dropout': 0.6}
+
+
+Train energy: 4064860370.400000
+Test energy: 159438288.200000
+2024-03-18 15:34:16.508960
+RandomForest - Adult
+
+Log Loss - mean: 0.30045
+Log Loss - std: 0.00647
+AUC - mean: 0.91759
+AUC - std: 0.00472
+Accuracy - mean: 0.86180
+Accuracy - std: 0.00503
+F1 score - mean: 0.86180
+F1 score - std: 0.00503
+
+Train time: 1.583927
+Test time: 0.080687
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 85}
+
+
+Train energy: 116122505.600000
+Test energy: 5883700.600000
+2024-03-18 15:34:23.980687
+LinearModel - Adult
+
+Log Loss - mean: 0.38448
+Log Loss - std: 0.00568
+AUC - mean: 0.85329
+AUC - std: 0.00443
+Accuracy - mean: 0.82442
+Accuracy - std: 0.00309
+F1 score - mean: 0.82442
+F1 score - std: 0.00309
+
+Train time: 0.197214
+Test time: 0.004253
+Train energy: 14993552.800000
+Test energy: 303087.600000
+2024-03-18 16:37:37.164351
+VIME - Adult
+
+Log Loss - mean: 0.34051
+Log Loss - std: 0.00747
+AUC - mean: 0.90611
+AUC - std: 0.00451
+Accuracy - mean: 0.85013
+Accuracy - std: 0.00381
+F1 score - mean: 0.85013
+F1 score - std: 0.00381
+
+Train time: 380.644789
+Test time: 0.051309
+
+Best Parameters: {'p_m': 0.113, 'K': 15, 'alpha': 9.83, 'beta': 0.313}
+
+
+Train energy: 17058695819.400000
+Test energy: 5401792.600000
+2024-03-18 22:50:26.761673
+RandomForest - Adult
+
+Log Loss - mean: 0.30015
+Log Loss - std: 0.00654
+AUC - mean: 0.91761
+AUC - std: 0.00487
+Accuracy - mean: 0.86097
+Accuracy - std: 0.00487
+F1 score - mean: 0.86097
+F1 score - std: 0.00487
+
+Train time: 1.512699
+Test time: 0.055386
+
+Best Parameters: {'max_depth': 12, 'n_estimators': 85}
+
+
+Train energy: 139637566.400000
+Test energy: 5028396.000000
+2024-03-18 22:52:42.797224
+LinearModel - Adult
+
+Log Loss - mean: 0.38459
+Log Loss - std: 0.00574
+AUC - mean: 0.85323
+AUC - std: 0.00445
+Accuracy - mean: 0.82393
+Accuracy - std: 0.00341
+F1 score - mean: 0.82393
+F1 score - std: 0.00341
+
+Train time: 0.123427
+Test time: 0.003075
+Train energy: 13718892.000000
+Test energy: 273252.600000
+2024-03-18 22:57:14.749048
+LightGBM - Adult
+
+Log Loss - mean: 0.52383
+Log Loss - std: 0.00407
+AUC - mean: 0.89814
+AUC - std: 0.00399
+Accuracy - mean: 0.75919
+Accuracy - std: 0.00005
+F1 score - mean: 0.75919
+F1 score - std: 0.00005
+
+Train time: 0.065358
+Test time: 0.003558
+
+Best Parameters: {'num_leaves': 24, 'lambda_l2': 0.00015, 'lambda_l1': 6.1e-05, 'learning_rate': 0.024, 'verbosity': -1, 'objective': 'binary', 'metric': 'auc'}
+
+
+Train energy: 7587730.200000
+Test energy: 358499.000000
+2024-03-18 23:02:48.226429
+DeepGBM - Adult
+
+Log Loss - mean: 0.69150
+Log Loss - std: 0.00160
+AUC - mean: 0.90533
+AUC - std: 0.00377
+Accuracy - mean: 0.24081
+Accuracy - std: 0.00005
+F1 score - mean: 0.24081
+F1 score - std: 0.00005
+
+Train time: 36.253259
+Test time: 0.449844
+
+Best Parameters: {'n_trees': 200, 'maxleaf': 64, 'loss_de': 10, 'loss_dr': 0.7}
+
+
+Train energy: 3712930341.200000
+Test energy: 46570345.400000
+2024-03-18 23:09:36.048418
+KNN - Adult
+
+Log Loss - mean: 0.46603
+Log Loss - std: 0.00930
+AUC - mean: 0.86552
+AUC - std: 0.00435
+Accuracy - mean: 0.82286
+Accuracy - std: 0.00596
+F1 score - mean: 0.82286
+F1 score - std: 0.00596
+
+Train time: 0.022008
+Test time: 0.525895
+
+Best Parameters: {'n_neighbors': 25}
+
+
+Train energy: 2498482.200000
+Test energy: 51801352.600000
+2024-03-19 00:09:00.601112
+XGBoost - Adult
+
+Log Loss - mean: 0.61134
+Log Loss - std: 0.00088
+AUC - mean: 0.88949
+AUC - std: 0.00660
+Accuracy - mean: 0.85277
+Accuracy - std: 0.00448
+F1 score - mean: 0.85277
+F1 score - std: 0.00448
+
+Train time: 0.122927
+Test time: 0.004590
+
+Best Parameters: {'max_depth': 5, 'lambda': 0.354, 'alpha': 0.132, 'eta': 0.054, 'verbosity': 1, 'objective': 'binary:logistic', 'eval_metric': 'auc'}
+
+
+Train energy: 13341952.400000
+Test energy: 497081.200000
+2024-03-19 00:16:42.873091
+DNFNet - Adult
+
+Log Loss - mean: 0.33530
+Log Loss - std: 0.00407
+AUC - mean: 0.89966
+AUC - std: 0.00316
+Accuracy - mean: 0.84549
+Accuracy - std: 0.00536
+F1 score - mean: 0.84549
+F1 score - std: 0.00536
+
+Train time: 3.250668
+Test time: 0.189562
+
+Best Parameters: {'n_forumlas': 1024, 'elastic_net_beta': 1.3}
+
+
+Train energy: 344563367.000000
+Test energy: 19357012.800000
+2024-03-19 00:19:36.958379
+VIME - Adult
+
+Log Loss - mean: 0.39170
+Log Loss - std: 0.02293
+AUC - mean: 0.87737
+AUC - std: 0.01993
+Accuracy - mean: 0.82596
+Accuracy - std: 0.01370
+F1 score - mean: 0.82596
+F1 score - std: 0.01370
+
+Train time: 18.365608
+Test time: 0.040668
+
+Best Parameters: {'p_m': 0.113, 'K': 15, 'alpha': 9.83, 'beta': 0.313}
+
+
+Train energy: 3069005441.600000
+Test energy: 64185117.800000
+2024-03-19 00:20:16.079180
+MLP - Adult
+
+Log Loss - mean: 0.35693
+Log Loss - std: 0.00633
+AUC - mean: 0.88798
+AUC - std: 0.00424
+Accuracy - mean: 0.83149
+Accuracy - std: 0.00981
+F1 score - mean: 0.83149
+F1 score - std: 0.00981
+
+Train time: 1.346607
+Test time: 0.033047
+
+Best Parameters: {'hidden_dim': 47, 'n_layers': 4, 'learning_rate': 0.00084}
+
+
+Train energy: 558125171.200000
+Test energy: 69906412.600000
+2024-03-19 00:20:25.872008
+DecisionTree - Adult
+
+Log Loss - mean: 0.42021
+Log Loss - std: 0.00880
+AUC - mean: 0.89937
+AUC - std: 0.00176
+Accuracy - mean: 0.85406
+Accuracy - std: 0.00457
+F1 score - mean: 0.85406
+F1 score - std: 0.00457
+
+Train time: 0.083244
+Test time: 0.003140
+
+Best Parameters: {'max_depth': 8}
+
+
+Train energy: 8599424.000000
+Test energy: 310353.800000
+2024-03-19 15:50:16.964435
+LightGBM - Adult
+
+Log Loss - mean: 0.27566
+Log Loss - std: 0.00783
+AUC - mean: 0.92975
+AUC - std: 0.00413
+Accuracy - mean: 0.87500
+Accuracy - std: 0.00618
+F1 score - mean: 0.87500
+F1 score - std: 0.00618
+
+Train time: 1.539516
+Test time: 0.208951
+
+Best Parameters: {'num_leaves': 24, 'lambda_l2': 0.00015, 'lambda_l1': 6.1e-05, 'learning_rate': 0.024, 'verbosity': -1, 'objective': 'binary', 'metric': 'auc'}
+
+
+Train energy: 100079004.200000
+Test energy: 13858595.000000
+2024-03-19 15:53:29.003059
+ModelTree - Adult
+
+Log Loss - mean: 0.31896
+Log Loss - std: 0.00796
+AUC - mean: 0.90468
+AUC - std: 0.00503
+Accuracy - mean: 0.85040
+Accuracy - std: 0.00612
+F1 score - mean: 0.85040
+F1 score - std: 0.00612
+
+Train time: 2.265266
+Test time: 0.009643
+
+Best Parameters: {'criterion': 'gradient-renorm-z', 'max_depth': 3}
+
+
+Train energy: 131782438.400000
+Test energy: 585960.600000
+2024-03-19 16:17:02.365956
+RLN - Adult
+
+Log Loss - mean: 0.51916
+Log Loss - std: 0.06572
+AUC - mean: 0.57082
+AUC - std: 0.14169
+Accuracy - mean: 0.77240
+Accuracy - std: 0.02642
+F1 score - mean: 0.77240
+F1 score - std: 0.02642
+
+Train time: 152.074303
+Test time: 0.100318
+
+Best Parameters: {'layers': 5, 'theta': -12, 'log_lr': 5, 'norm': 2}
+
+
+Train energy: 5513383505.400000
+Test energy: 5801718.600000
+2024-03-19 16:58:43.277380
+DNFNet - Adult
+
+Log Loss - mean: 0.30433
+Log Loss - std: 0.00614
+AUC - mean: 0.91324
+AUC - std: 0.00396
+Accuracy - mean: 0.85716
+Accuracy - std: 0.00478
+F1 score - mean: 0.85716
+F1 score - std: 0.00478
+
+Train time: 2450.099311
+Test time: 2.817060
+
+Best Parameters: {'n_forumlas': 1024, 'elastic_net_beta': 1.3}
+
+
+Train energy: 12193142991.799999
+Test energy: 20094821.600000
