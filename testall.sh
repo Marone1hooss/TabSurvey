@@ -46,7 +46,7 @@ MODELS=( ["LinearModel"]=$SKLEARN_ENV
          ["DeepGBM"]=$TORCH_ENV
          ["RLN"]=$KERAS_ENV
          ["DNFNet"]=$KERAS_ENV
-         ["STG"]=$TORCH_ENV !!!!!!!!!!!!!!!!!!!!!!!!!!
+         ["STG"]=$TORCH_ENV 
          ["NAM"]=$TORCH_ENV !!!!!!!!!!!!!!!!!
          ["DeepFM"]=$TORCH_ENV
          ["SAINT"]=$TORCH_ENV
