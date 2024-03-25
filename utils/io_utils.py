@@ -48,7 +48,7 @@ def save_results_to_json_file(args, jsondict, resultsname, append=True):
 
 
 def save_results_to_file(args, results, train_time=None, test_time=None, best_params=None,train_energy=None,test_energy=None):
-    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/output1.txt"
+    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/output3.txt"
 
     with open(filename, "a") as text_file:
         text_file.write(str(datetime.datetime.now()) + "\n")

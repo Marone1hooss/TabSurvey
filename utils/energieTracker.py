@@ -12,9 +12,9 @@ class EnergyTracker:
 
     def end_tracking(self):
         self.rapl.end()
-        energy_consumed = self.rapl.result.pkg[0]
-        
-        self.energy_values.append(energy_consumed)
+        if len(self.rapl.result.pkg>0):
+            energy_consumed = self.rapl.result.pkg[0]
+            self.energy_values.append(energy_consumed)
 
     def get_average_energy(self):
         if len(self.energy_values) == 0:
@@ -22,7 +22,8 @@ class EnergyTracker:
         return np.mean(self.energy_values)
 
     def get_total_energy(self):
-        return np.sum(np.array(self.energy_values))
+        
+        return np.sum(np.array(self.energy_values)) 
 
 """ # Example usage
 if __name__ == "__main__":

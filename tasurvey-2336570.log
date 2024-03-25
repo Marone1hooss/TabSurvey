@@ -1,0 +1,1828 @@
+
+
+----------------------------------------------------------------------------
+Training STG with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+Namespace(config='config/adult.yml', model_name='STG', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+Epoch: 1: loss=0.598421 valid_loss=0.553305
+Epoch: 2: loss=0.561729 valid_loss=0.551191
+Epoch: 3: loss=0.556661 valid_loss=0.548250
+{'Log Loss - mean': 0.5483915254202242, 'Log Loss - std': 0.0, 'AUC - mean': 0.6518937530552513, 'AUC - std': 0.0, 'Accuracy - mean': 0.7590971902349147, 'Accuracy - std': 0.0, 'F1 score - mean': 0.7590971902349147, 'F1 score - std': 0.0}
+Epoch: 1: loss=0.569023 valid_loss=0.547828
+Epoch: 2: loss=0.556390 valid_loss=0.541374
+Epoch: 3: loss=0.549925 valid_loss=0.533762
+{'Log Loss - mean': 0.5410606483893392, 'Log Loss - std': 0.007330877030884975, 'AUC - mean': 0.7039065232959204, 'AUC - std': 0.05201277024066908, 'Accuracy - mean': 0.759155474724337, 'Accuracy - std': 5.828448942224451e-05, 'F1 score - mean': 0.759155474724337, 'F1 score - std': 5.828448942224451e-05}
+Epoch: 1: loss=0.585875 valid_loss=0.552536
+Epoch: 2: loss=0.564331 valid_loss=0.549716
+Epoch: 3: loss=0.559385 valid_loss=0.546028
+{'Log Loss - mean': 0.542688682934993, 'Log Loss - std': 0.006413176409418479, 'AUC - mean': 0.7020189918449257, 'AUC - std': 0.0425520590417911, 'Accuracy - mean': 0.7591749028874778, 'Accuracy - std': 5.495114361128626e-05, 'F1 score - mean': 0.7591749028874778, 'F1 score - std': 5.495114361128626e-05}
+Epoch: 1: loss=0.578082 valid_loss=0.547986
+Epoch: 2: loss=0.555206 valid_loss=0.541174
+Epoch: 3: loss=0.546730 valid_loss=0.531955
+{'Log Loss - mean': 0.5400044774649899, 'Log Loss - std': 0.007243031185858747, 'AUC - mean': 0.7208626939736817, 'AUC - std': 0.049226655647869384, 'Accuracy - mean': 0.7591846169690482, 'Accuracy - std': 5.047584848626914e-05, 'F1 score - mean': 0.7591846169690482, 'F1 score - std': 5.047584848626914e-05}
+Epoch: 1: loss=0.585458 valid_loss=0.555032
+Epoch: 2: loss=0.564800 valid_loss=0.551491
+Epoch: 3: loss=0.559238 valid_loss=0.547996
+{'Log Loss - mean': 0.5416143574792939, 'Log Loss - std': 0.007234366264523705, 'AUC - mean': 0.6974998951853848, 'AUC - std': 0.06420196546764685, 'Accuracy - mean': 0.7591904454179904, 'Accuracy - std': 4.662759153779561e-05, 'F1 score - mean': 0.7591904454179904, 'F1 score - std': 4.662759153779561e-05}
+Results: {'Log Loss - mean': 0.5416143574792939, 'Log Loss - std': 0.007234366264523705, 'AUC - mean': 0.6974998951853848, 'AUC - std': 0.06420196546764685, 'Accuracy - mean': 0.7591904454179904, 'Accuracy - std': 4.662759153779561e-05, 'F1 score - mean': 0.7591904454179904, 'F1 score - std': 4.662759153779561e-05}
+Train time: 1.0526653832000001
+Inference time: 0.04782497259999996
+Finished cross validation
+{'Log Loss - mean': 0.5416143574792939, 'Log Loss - std': 0.007234366264523705, 'AUC - mean': 0.6974998951853848, 'AUC - std': 0.06420196546764685, 'Accuracy - mean': 0.7591904454179904, 'Accuracy - std': 4.662759153779561e-05, 'F1 score - mean': 0.7591904454179904, 'F1 score - std': 4.662759153779561e-05}
+(1.0526653832000001, 0.04782497259999996)
+
+
+----------------------------------------------------------------------------
+Training SAINT with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Namespace(config='config/adult.yml', model_name='SAINT', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+Using dim 32 and batch size 128
+Using dim 32 and batch size 128
+Epoch 0 loss 0.3446592688560486
+Epoch 1 loss 0.3227740526199341
+Epoch 2 loss 0.31456977128982544
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.315559273282329, 'Log Loss - std': 0.0, 'AUC - mean': 0.9084285102130477, 'AUC - std': 0.0, 'Accuracy - mean': 0.85014586212191, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8501458621219101, 'F1 score - std': 0.0}
+Using dim 32 and batch size 128
+Epoch 0 loss 0.3171340823173523
+Epoch 1 loss 0.30588802695274353
+Epoch 2 loss 0.3057263195514679
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3097775300619513, 'Log Loss - std': 0.005781743220377722, 'AUC - mean': 0.9116724166174874, 'AUC - std': 0.0032439064044397226, 'Accuracy - mean': 0.8540502037882277, 'Accuracy - std': 0.003904341666317701, 'F1 score - mean': 0.8540502037882278, 'F1 score - std': 0.0039043416663176456}
+Using dim 32 and batch size 128
+Epoch 0 loss 0.3166925013065338
+Epoch 1 loss 0.30148398876190186
+Epoch 2 loss 0.29695379734039307
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3052068488252606, 'Log Loss - std': 0.008004246188479908, 'AUC - mean': 0.9143896861449212, 'AUC - std': 0.004667161151058498, 'Accuracy - mean': 0.8560170891757718, 'Accuracy - std': 0.00423082326350698, 'F1 score - mean': 0.8560170891757718, 'F1 score - std': 0.004230823263506894}
+Using dim 32 and batch size 128
+Epoch 0 loss 0.32720836997032166
+Epoch 1 loss 0.31082215905189514
+Epoch 2 loss 0.30495578050613403
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3055513594551908, 'Log Loss - std': 0.006957516116168976, 'AUC - mean': 0.914316725819146, 'AUC - std': 0.004043855157504278, 'Accuracy - mean': 0.8572692665132785, 'Accuracy - std': 0.004257786205173982, 'F1 score - mean': 0.8572692665132785, 'F1 score - std': 0.004257786205173943}
+Using dim 32 and batch size 128
+Epoch 0 loss 0.328988254070282
+Epoch 1 loss 0.31474512815475464
+Epoch 2 loss 0.3102797269821167
+{'Log Loss - mean': 0.3067026798121772, 'Log Loss - std': 0.006635343145840014, 'AUC - mean': 0.9137901442442475, 'AUC - std': 0.003767142716700464, 'Accuracy - mean': 0.8566692215644311, 'Accuracy - std': 0.0039928949970822886, 'F1 score - mean': 0.8566692215644311, 'F1 score - std': 0.003992894997082258}
+Results: {'Log Loss - mean': 0.3067026798121772, 'Log Loss - std': 0.006635343145840014, 'AUC - mean': 0.9137901442442475, 'AUC - std': 0.003767142716700464, 'Accuracy - mean': 0.8566692215644311, 'Accuracy - std': 0.0039928949970822886, 'F1 score - mean': 0.8566692215644311, 'F1 score - std': 0.003992894997082258}
+Train time: 37.429366588
+Inference time: 0.7530671105999958
+Finished cross validation
+{'Log Loss - mean': 0.3067026798121772, 'Log Loss - std': 0.006635343145840014, 'AUC - mean': 0.9137901442442475, 'AUC - std': 0.003767142716700464, 'Accuracy - mean': 0.8566692215644311, 'Accuracy - std': 0.0039928949970822886, 'F1 score - mean': 0.8566692215644311, 'F1 score - std': 0.003992894997082258}
+(37.429366588, 0.7530671105999958)
+
+
+----------------------------------------------------------------------------
+Training RandomForest with config/adult.yml in env sklearn
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/adult.yml', model_name='RandomForest', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+{'Log Loss - mean': 0.3083069054581668, 'Log Loss - std': 0.0, 'AUC - mean': 0.9115848297619121, 'AUC - std': 0.0, 'Accuracy - mean': 0.8526024873330262, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8526024873330262, 'F1 score - std': 0.0}
+{'Log Loss - mean': 0.30282147534039217, 'Log Loss - std': 0.005485430117774637, 'AUC - mean': 0.91605765340962, 'AUC - std': 0.0044728236477078465, 'Accuracy - mean': 0.8585033321186015, 'Accuracy - std': 0.005900844785575343, 'F1 score - mean': 0.8585033321186015, 'F1 score - std': 0.005900844785575343}
+{'Log Loss - mean': 0.29795907728942034, 'Log Loss - std': 0.008206448196196004, 'AUC - mean': 0.9193596737800808, 'AUC - std': 0.0059282469001838995, 'Accuracy - mean': 0.8612892811994608, 'Accuracy - std': 0.006223852291888752, 'F1 score - mean': 0.8612892811994608, 'F1 score - std': 0.006223852291888752}
+{'Log Loss - mean': 0.2988345527934962, 'Log Loss - std': 0.007266960580073827, 'AUC - mean': 0.9185636825236545, 'AUC - std': 0.005315909115389053, 'Accuracy - mean': 0.8614153638479985, 'Accuracy - std': 0.0053944363483336725, 'F1 score - mean': 0.8614153638479985, 'F1 score - std': 0.0053944363483336725}
+{'Log Loss - mean': 0.2994459961207292, 'Log Loss - std': 0.006613805608539508, 'AUC - mean': 0.91803397347748, 'AUC - std': 0.00487129125313382, 'Accuracy - mean': 0.8615217259678337, 'Accuracy - std': 0.00482961762618141, 'F1 score - mean': 0.8615217259678337, 'F1 score - std': 0.00482961762618141}
+Results: {'Log Loss - mean': 0.2994459961207292, 'Log Loss - std': 0.006613805608539508, 'AUC - mean': 0.91803397347748, 'AUC - std': 0.00487129125313382, 'Accuracy - mean': 0.8615217259678337, 'Accuracy - std': 0.00482961762618141, 'F1 score - mean': 0.8615217259678337, 'F1 score - std': 0.00482961762618141}
+Train time: 1.5433707228000002
+Inference time: 0.055337540199999945
+Finished cross validation
+{'Log Loss - mean': 0.2994459961207292, 'Log Loss - std': 0.006613805608539508, 'AUC - mean': 0.91803397347748, 'AUC - std': 0.00487129125313382, 'Accuracy - mean': 0.8615217259678337, 'Accuracy - std': 0.00482961762618141, 'F1 score - mean': 0.8615217259678337, 'F1 score - std': 0.00482961762618141}
+(1.5433707228000002, 0.055337540199999945)
+
+
+----------------------------------------------------------------------------
+Training LinearModel with config/adult.yml in env sklearn
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+Namespace(config='config/adult.yml', model_name='LinearModel', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+{'Log Loss - mean': 0.3952096059059315, 'Log Loss - std': 0.0, 'AUC - mean': 0.845634393930956, 'AUC - std': 0.0, 'Accuracy - mean': 0.81759557807462, 'Accuracy - std': 0.0, 'F1 score - mean': 0.81759557807462, 'F1 score - std': 0.0}
+{'Log Loss - mean': 0.3885366087979829, 'Log Loss - std': 0.006672997107948581, 'AUC - mean': 0.8503019651445942, 'AUC - std': 0.004667571213638311, 'Accuracy - mean': 0.8207296072191281, 'Accuracy - std': 0.003134029144508166, 'F1 score - mean': 0.8207296072191281, 'F1 score - std': 0.003134029144508166}
+{'Log Loss - mean': 0.3851609332737402, 'Log Loss - std': 0.00724405255537739, 'AUC - mean': 0.8531924124839532, 'AUC - std': 0.005588695643839488, 'Accuracy - mean': 0.8230027848291321, 'Accuracy - std': 0.004108864240354539, 'F1 score - mean': 0.8230027848291321, 'F1 score - std': 0.004108864240354539}
+{'Log Loss - mean': 0.3844161511444356, 'Log Loss - std': 0.006404789171330822, 'AUC - mean': 0.8536153446520806, 'AUC - std': 0.00489507447401095, 'Accuracy - mean': 0.8234099510297115, 'Accuracy - std': 0.0036275924459524024, 'F1 score - mean': 0.8234099510297115, 'F1 score - std': 0.0036275924459524024}
+{'Log Loss - mean': 0.3845945410160526, 'Log Loss - std': 0.005739717000736131, 'AUC - mean': 0.8532316842399261, 'AUC - std': 0.004445017945105384, 'Accuracy - mean': 0.8239306635264718, 'Accuracy - std': 0.0034076542636063485, 'F1 score - mean': 0.8239306635264718, 'F1 score - std': 0.003407654263606335}
+Results: {'Log Loss - mean': 0.3845945410160526, 'Log Loss - std': 0.005739717000736131, 'AUC - mean': 0.8532316842399261, 'AUC - std': 0.004445017945105384, 'Accuracy - mean': 0.8239306635264718, 'Accuracy - std': 0.0034076542636063485, 'F1 score - mean': 0.8239306635264718, 'F1 score - std': 0.003407654263606335}
+Train time: 0.1236401726
+Inference time: 0.0029679651999999558
+Finished cross validation
+{'Log Loss - mean': 0.3845945410160526, 'Log Loss - std': 0.005739717000736131, 'AUC - mean': 0.8532316842399261, 'AUC - std': 0.004445017945105384, 'Accuracy - mean': 0.8239306635264718, 'Accuracy - std': 0.0034076542636063485, 'F1 score - mean': 0.8239306635264718, 'F1 score - std': 0.003407654263606335}
+(0.1236401726, 0.0029679651999999558)
+
+
+----------------------------------------------------------------------------
+Training ModelTree with config/adult.yml in env gbdt
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/adult.yml', model_name='ModelTree', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+{'Log Loss - mean': 0.327260324960232, 'Log Loss - std': 0.0, 'AUC - mean': 0.9002035029423231, 'AUC - std': 0.0, 'Accuracy - mean': 0.8432366037156457, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8432366037156457, 'F1 score - std': 0.0}
+{'Log Loss - mean': 0.3208782487661368, 'Log Loss - std': 0.006382076194095226, 'AUC - mean': 0.9036205755663336, 'AUC - std': 0.0034170726240104754, 'Accuracy - mean': 0.8479082281477491, 'Accuracy - std': 0.0046716244321034495, 'F1 score - mean': 0.8479082281477491, 'F1 score - std': 0.0046716244321034495}
+{'Log Loss - mean': 0.31620475177748414, 'Log Loss - std': 0.008416476652221094, 'AUC - mean': 0.9066781539071552, 'AUC - std': 0.005146049698461115, 'Accuracy - mean': 0.8518200636464109, 'Accuracy - std': 0.0067196947222523335, 'F1 score - mean': 0.8518200636464109, 'F1 score - std': 0.0067196947222523335}
+{'Log Loss - mean': 0.31670384449658423, 'Log Loss - std': 0.007339965262507266, 'AUC - mean': 0.906169261348321, 'AUC - std': 0.00454293798478302, 'Accuracy - mean': 0.8520100108797714, 'Accuracy - std': 0.005828718789286648, 'F1 score - mean': 0.8520100108797714, 'F1 score - std': 0.005828718789286648}
+{'Log Loss - mean': 0.3189588110233351, 'Log Loss - std': 0.007964895993728863, 'AUC - mean': 0.9046849044471926, 'AUC - std': 0.005032284775981773, 'Accuracy - mean': 0.850404077499886, 'Accuracy - std': 0.006123337183447297, 'F1 score - mean': 0.850404077499886, 'F1 score - std': 0.006123337183447297}
+Results: {'Log Loss - mean': 0.3189588110233351, 'Log Loss - std': 0.007964895993728863, 'AUC - mean': 0.9046849044471926, 'AUC - std': 0.005032284775981773, 'Accuracy - mean': 0.850404077499886, 'Accuracy - std': 0.006123337183447297, 'F1 score - mean': 0.850404077499886, 'F1 score - std': 0.006123337183447297}
+Train time: 0.9701372859999999
+Inference time: 0.007969832000000033
+Finished cross validation
+{'Log Loss - mean': 0.3189588110233351, 'Log Loss - std': 0.007964895993728863, 'AUC - mean': 0.9046849044471926, 'AUC - std': 0.005032284775981773, 'Accuracy - mean': 0.850404077499886, 'Accuracy - std': 0.006123337183447297, 'F1 score - mean': 0.850404077499886, 'F1 score - std': 0.006123337183447297}
+(0.9701372859999999, 0.007969832000000033)
+
+
+----------------------------------------------------------------------------
+Training NAM with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/adult.yml', model_name='NAM', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+Traceback (most recent call last):
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 154, in <module>
+    main_once(arguments)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 133, in main_once
+    model_name = str2model(args.model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/__init__.py", line 81, in str2model
+    from models.neural_additive_models import NAM
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/neural_additive_models.py", line 4, in <module>
+    from nam.config import defaults
+ModuleNotFoundError: No module named 'nam'
+
+
+----------------------------------------------------------------------------
+Training LightGBM with config/adult.yml in env gbdt
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1780: UserWarning: Overriding the parameters from Reference Dataset.
+  _log_warning('Overriding the parameters from Reference Dataset.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1513: UserWarning: categorical_column in param dict is overridden.
+  _log_warning(f'{cat_alias} in param dict is overridden.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1780: UserWarning: Overriding the parameters from Reference Dataset.
+  _log_warning('Overriding the parameters from Reference Dataset.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1513: UserWarning: categorical_column in param dict is overridden.
+  _log_warning(f'{cat_alias} in param dict is overridden.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1780: UserWarning: Overriding the parameters from Reference Dataset.
+  _log_warning('Overriding the parameters from Reference Dataset.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1513: UserWarning: categorical_column in param dict is overridden.
+  _log_warning(f'{cat_alias} in param dict is overridden.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1780: UserWarning: Overriding the parameters from Reference Dataset.
+  _log_warning('Overriding the parameters from Reference Dataset.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1513: UserWarning: categorical_column in param dict is overridden.
+  _log_warning(f'{cat_alias} in param dict is overridden.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1780: UserWarning: Overriding the parameters from Reference Dataset.
+  _log_warning('Overriding the parameters from Reference Dataset.')
+/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/lightgbm/basic.py:1513: UserWarning: categorical_column in param dict is overridden.
+  _log_warning(f'{cat_alias} in param dict is overridden.')
+Namespace(config='config/adult.yml', model_name='LightGBM', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[2]	eval's auc: 0.896125
+{'Log Loss - mean': 0.5319043205643598, 'Log Loss - std': 0.0, 'AUC - mean': 0.8961249358010481, 'AUC - std': 0.0, 'Accuracy - mean': 0.7590971902349147, 'Accuracy - std': 0.0, 'F1 score - mean': 0.7590971902349147, 'F1 score - std': 0.0}
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's auc: 0.899139
+{'Log Loss - mean': 0.5268965814725322, 'Log Loss - std': 0.005007739091827668, 'AUC - mean': 0.8976320541543217, 'AUC - std': 0.001507118353273551, 'Accuracy - mean': 0.759155474724337, 'Accuracy - std': 5.828448942224451e-05, 'F1 score - mean': 0.759155474724337, 'F1 score - std': 5.828448942224451e-05}
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's auc: 0.904335
+{'Log Loss - mean': 0.5249603723575763, 'Log Loss - std': 0.004920986894403297, 'AUC - mean': 0.8998664531837103, 'AUC - std': 0.003391068936522489, 'Accuracy - mean': 0.7591749028874778, 'Accuracy - std': 5.495114361128626e-05, 'F1 score - mean': 0.7591749028874778, 'F1 score - std': 5.495114361128626e-05}
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's auc: 0.898927
+{'Log Loss - mean': 0.5241320437416803, 'Log Loss - std': 0.004496717569394689, 'AUC - mean': 0.8996314706317066, 'AUC - std': 0.002964820702576192, 'Accuracy - mean': 0.7591846169690482, 'Accuracy - std': 5.047584848626914e-05, 'F1 score - mean': 0.7591846169690482, 'F1 score - std': 5.047584848626914e-05}
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's auc: 0.892169
+{'Log Loss - mean': 0.5238280361918439, 'Log Loss - std': 0.004067684535525391, 'AUC - mean': 0.8981389020890453, 'AUC - std': 0.003992890288613877, 'Accuracy - mean': 0.7591904454179904, 'Accuracy - std': 4.662759153779561e-05, 'F1 score - mean': 0.7591904454179904, 'F1 score - std': 4.662759153779561e-05}
+Results: {'Log Loss - mean': 0.5238280361918439, 'Log Loss - std': 0.004067684535525391, 'AUC - mean': 0.8981389020890453, 'AUC - std': 0.003992890288613877, 'Accuracy - mean': 0.7591904454179904, 'Accuracy - std': 4.662759153779561e-05, 'F1 score - mean': 0.7591904454179904, 'F1 score - std': 4.662759153779561e-05}
+Train time: 0.06545202960000003
+Inference time: 0.0035876615999999918
+Finished cross validation
+{'Log Loss - mean': 0.5238280361918439, 'Log Loss - std': 0.004067684535525391, 'AUC - mean': 0.8981389020890453, 'AUC - std': 0.003992890288613877, 'Accuracy - mean': 0.7591904454179904, 'Accuracy - std': 4.662759153779561e-05, 'F1 score - mean': 0.7591904454179904, 'F1 score - std': 4.662759153779561e-05}
+(0.06545202960000003, 0.0035876615999999918)
+
+
+----------------------------------------------------------------------------
+Training DeepGBM with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/deepgbm_lib/utils/helper.py:52: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at /opt/conda/conda-bld/pytorch_1708025569485/work/torch/csrc/utils/python_arg_parser.cpp:1630.)
+  p.data.add_(-self.weight_decay, p.data)
+Namespace(config='config/adult.yml', model_name='DeepGBM', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+{'task': 'binary', 'batch_size': 128, 'test_batch_size': 256, 'l2_reg': 1e-06, 'l2_reg_opt': 0.0005, 'lr': 0.001, 'epochs': 3, 'early_stopping': 3, 'loss_de': 10, 'loss_dr': 0.7, 'device': device(type='cpu'), 'bins': 32, 'rate': 0.9, 'threshold': 10, 'maxleaf': 64, 'num_slices': 5, 'n_feature': 128, 'n_clusters': 10, 'tree_lr': 0.1, 'n_trees': 200, 'embsize': 20, 'emb_lr': 0.001, 'emb_epochs': 3, 'tree_layers': [100, 100, 100, 50, 20], 'embedding_size': 20, 'cate_layers': [16, 16], 'online_epochs': 1, 'online_bz': 4096, 'num_splits': 5, 'early-stopping': 20}
+{'task': 'binary', 'batch_size': 128, 'test_batch_size': 256, 'l2_reg': 1e-06, 'l2_reg_opt': 0.0005, 'lr': 0.001, 'epochs': 3, 'early_stopping': 3, 'loss_de': 10, 'loss_dr': 0.7, 'device': device(type='cpu'), 'bins': 32, 'rate': 0.9, 'threshold': 10, 'maxleaf': 64, 'num_slices': 5, 'n_feature': 128, 'n_clusters': 10, 'tree_lr': 0.1, 'n_trees': 200, 'embsize': 20, 'emb_lr': 0.001, 'emb_epochs': 3, 'tree_layers': [100, 100, 100, 50, 20], 'embedding_size': 20, 'cate_layers': [16, 16], 'online_epochs': 1, 'online_bz': 4096, 'num_splits': 5, 'early-stopping': 20}
+Preprocess data for CatNN...
+Preprocess data for GBDT2NN...
+
+################### Train model #######################################
+
+
+Train GBDT and distill knowledge from it...
+[LightGBM] [Info] Number of positive: 6272, number of negative: 19776
+[LightGBM] [Warning] Auto-choosing row-wise multi-threading, the overhead of testing was 0.009048 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 643
+[LightGBM] [Info] Number of data points in the train set: 26048, number of used features: 33
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.240786 -> initscore=-1.148374
+[LightGBM] [Info] Start training from score -1.148374
+Training until validation scores don't improve for 20 rounds
+Early stopping, best iteration is:
+[81]	valid_0's auc: 0.9199
+Model Interpreting...
+[(17,), (16,), (16,), (16,), (16,)]
+
+Train embedding model...
+Epoch 1: training loss 0.848
+Test Loss of 0.347142, Test AUC of 0.895992
+Epoch 2: training loss 0.420
+Test Loss of 0.307378, Test AUC of 0.911030
+Epoch 3: training loss 0.327
+Test Loss of 0.301839, Test AUC of 0.915146
+Finished Training
+
+Train DeepGBM model...
+Init GBDT2NN succeed!
+Init fm part
+Init fm part succeed
+Init deep part
+Init deep part succeed
+Init CatNN succeed!
+Init DeepGBM succeed!
+Epoch 1: training loss 0.702
+Test Loss of 0.694172, Test AUC of 0.893028
+Epoch 2: training loss 0.693
+Test Loss of 0.693165, Test AUC of 0.896230
+Epoch 3: training loss 0.692
+Test Loss of 0.692856, Test AUC of 0.898069
+Finished Training
+
+################### Make predictions #######################################
+
+{'Log Loss - mean': 0.6928556923649107, 'Log Loss - std': 0.0, 'AUC - mean': 0.8980685655118075, 'AUC - std': 0.0, 'Accuracy - mean': 0.2409028097650852, 'Accuracy - std': 0.0, 'F1 score - mean': 0.2409028097650852, 'F1 score - std': 0.0}
+{'task': 'binary', 'batch_size': 128, 'test_batch_size': 256, 'l2_reg': 1e-06, 'l2_reg_opt': 0.0005, 'lr': 0.001, 'epochs': 3, 'early_stopping': 3, 'loss_de': 10, 'loss_dr': 0.7, 'device': device(type='cpu'), 'bins': 32, 'rate': 0.9, 'threshold': 10, 'maxleaf': 64, 'num_slices': 5, 'n_feature': 128, 'n_clusters': 10, 'tree_lr': 0.1, 'n_trees': 200, 'embsize': 20, 'emb_lr': 0.001, 'emb_epochs': 3, 'tree_layers': [100, 100, 100, 50, 20], 'embedding_size': 20, 'cate_layers': [16, 16], 'online_epochs': 1, 'online_bz': 4096, 'num_splits': 5, 'early-stopping': 20}
+Preprocess data for CatNN...
+Preprocess data for GBDT2NN...
+
+################### Train model #######################################
+
+
+Train GBDT and distill knowledge from it...
+[LightGBM] [Info] Number of positive: 6273, number of negative: 19776
+[LightGBM] [Warning] Auto-choosing row-wise multi-threading, the overhead of testing was 0.008391 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 646
+[LightGBM] [Info] Number of data points in the train set: 26049, number of used features: 33
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.240815 -> initscore=-1.148214
+[LightGBM] [Info] Start training from score -1.148214
+Training until validation scores don't improve for 20 rounds
+Early stopping, best iteration is:
+[67]	valid_0's auc: 0.927548
+Model Interpreting...
+[(14,), (14,), (13,), (13,), (13,)]
+
+Train embedding model...
+Epoch 1: training loss 0.738
+Test Loss of 0.328888, Test AUC of 0.904054
+Epoch 2: training loss 0.398
+Test Loss of 0.295325, Test AUC of 0.919071
+Epoch 3: training loss 0.327
+Test Loss of 0.289369, Test AUC of 0.923038
+Finished Training
+
+Train DeepGBM model...
+Init GBDT2NN succeed!
+Init fm part
+Init fm part succeed
+Init deep part
+Init deep part succeed
+Init CatNN succeed!
+Init DeepGBM succeed!
+Epoch 1: training loss 0.705
+Test Loss of 0.695019, Test AUC of 0.903717
+Epoch 2: training loss 0.695
+Test Loss of 0.693391, Test AUC of 0.905777
+Epoch 3: training loss 0.694
+Test Loss of 0.692951, Test AUC of 0.906889
+Finished Training
+
+################### Make predictions #######################################
+
+{'Log Loss - mean': 0.6929032306326961, 'Log Loss - std': 4.7538267785418586e-05, 'AUC - mean': 0.9024785472942434, 'AUC - std': 0.004409981782435901, 'Accuracy - mean': 0.240844525275663, 'Accuracy - std': 5.8284489422216756e-05, 'F1 score - mean': 0.240844525275663, 'F1 score - std': 5.8284489422216756e-05}
+{'task': 'binary', 'batch_size': 128, 'test_batch_size': 256, 'l2_reg': 1e-06, 'l2_reg_opt': 0.0005, 'lr': 0.001, 'epochs': 3, 'early_stopping': 3, 'loss_de': 10, 'loss_dr': 0.7, 'device': device(type='cpu'), 'bins': 32, 'rate': 0.9, 'threshold': 10, 'maxleaf': 64, 'num_slices': 5, 'n_feature': 128, 'n_clusters': 10, 'tree_lr': 0.1, 'n_trees': 200, 'embsize': 20, 'emb_lr': 0.001, 'emb_epochs': 3, 'tree_layers': [100, 100, 100, 50, 20], 'embedding_size': 20, 'cate_layers': [16, 16], 'online_epochs': 1, 'online_bz': 4096, 'num_splits': 5, 'early-stopping': 20}
+Preprocess data for CatNN...
+Preprocess data for GBDT2NN...
+
+################### Train model #######################################
+
+
+Train GBDT and distill knowledge from it...
+[LightGBM] [Info] Number of positive: 6273, number of negative: 19776
+[LightGBM] [Warning] Auto-choosing row-wise multi-threading, the overhead of testing was 0.008405 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 644
+[LightGBM] [Info] Number of data points in the train set: 26049, number of used features: 33
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.240815 -> initscore=-1.148214
+[LightGBM] [Info] Start training from score -1.148214
+Training until validation scores don't improve for 20 rounds
+Early stopping, best iteration is:
+[89]	valid_0's auc: 0.931802
+Model Interpreting...
+[(18,), (18,), (18,), (18,), (17,)]
+
+Train embedding model...
+Epoch 1: training loss 0.793
+Test Loss of 0.328339, Test AUC of 0.902870
+Epoch 2: training loss 0.403
+Test Loss of 0.290648, Test AUC of 0.920973
+Epoch 3: training loss 0.327
+Test Loss of 0.283998, Test AUC of 0.925885
+Finished Training
+
+Train DeepGBM model...
+Init GBDT2NN succeed!
+Init fm part
+Init fm part succeed
+Init deep part
+Init deep part succeed
+Init CatNN succeed!
+Init DeepGBM succeed!
+Epoch 1: training loss 0.706
+Test Loss of 0.691421, Test AUC of 0.906108
+Epoch 2: training loss 0.694
+Test Loss of 0.690452, Test AUC of 0.908957
+Epoch 3: training loss 0.693
+Test Loss of 0.690165, Test AUC of 0.910090
+Finished Training
+
+################### Make predictions #######################################
+
+{'Log Loss - mean': 0.6919906098335485, 'Log Loss - std': 0.001291224239759646, 'AUC - mean': 0.9050156802537103, 'AUC - std': 0.005083245045142922, 'Accuracy - mean': 0.24082509711252223, 'Accuracy - std': 5.4951143611260094e-05, 'F1 score - mean': 0.24082509711252223, 'F1 score - std': 5.4951143611260094e-05}
+{'task': 'binary', 'batch_size': 128, 'test_batch_size': 256, 'l2_reg': 1e-06, 'l2_reg_opt': 0.0005, 'lr': 0.001, 'epochs': 3, 'early_stopping': 3, 'loss_de': 10, 'loss_dr': 0.7, 'device': device(type='cpu'), 'bins': 32, 'rate': 0.9, 'threshold': 10, 'maxleaf': 64, 'num_slices': 5, 'n_feature': 128, 'n_clusters': 10, 'tree_lr': 0.1, 'n_trees': 200, 'embsize': 20, 'emb_lr': 0.001, 'emb_epochs': 3, 'tree_layers': [100, 100, 100, 50, 20], 'embedding_size': 20, 'cate_layers': [16, 16], 'online_epochs': 1, 'online_bz': 4096, 'num_splits': 5, 'early-stopping': 20}
+Preprocess data for CatNN...
+Preprocess data for GBDT2NN...
+
+################### Train model #######################################
+
+
+Train GBDT and distill knowledge from it...
+[LightGBM] [Info] Number of positive: 6273, number of negative: 19776
+[LightGBM] [Warning] Auto-choosing row-wise multi-threading, the overhead of testing was 0.008223 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 651
+[LightGBM] [Info] Number of data points in the train set: 26049, number of used features: 33
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.240815 -> initscore=-1.148214
+[LightGBM] [Info] Start training from score -1.148214
+Training until validation scores don't improve for 20 rounds
+Early stopping, best iteration is:
+[86]	valid_0's auc: 0.924147
+Model Interpreting...
+[(18,), (17,), (17,), (17,), (17,)]
+
+Train embedding model...
+Epoch 1: training loss 0.793
+Test Loss of 0.340795, Test AUC of 0.900181
+Epoch 2: training loss 0.401
+Test Loss of 0.302207, Test AUC of 0.914071
+Epoch 3: training loss 0.327
+Test Loss of 0.294295, Test AUC of 0.918465
+Finished Training
+
+Train DeepGBM model...
+Init GBDT2NN succeed!
+Init fm part
+Init fm part succeed
+Init deep part
+Init deep part succeed
+Init CatNN succeed!
+Init DeepGBM succeed!
+Epoch 1: training loss 0.706
+Test Loss of 0.693008, Test AUC of 0.902169
+Epoch 2: training loss 0.695
+Test Loss of 0.691495, Test AUC of 0.905400
+Epoch 3: training loss 0.694
+Test Loss of 0.691022, Test AUC of 0.906684
+Finished Training
+
+################### Make predictions #######################################
+
+{'Log Loss - mean': 0.6917485090605093, 'Log Loss - std': 0.00119427106677074, 'AUC - mean': 0.905432681137545, 'AUC - std': 0.004461076591259629, 'Accuracy - mean': 0.24081538303095187, 'Accuracy - std': 5.047584848624511e-05, 'F1 score - mean': 0.24081538303095187, 'F1 score - std': 5.047584848624511e-05}
+{'task': 'binary', 'batch_size': 128, 'test_batch_size': 256, 'l2_reg': 1e-06, 'l2_reg_opt': 0.0005, 'lr': 0.001, 'epochs': 3, 'early_stopping': 3, 'loss_de': 10, 'loss_dr': 0.7, 'device': device(type='cpu'), 'bins': 32, 'rate': 0.9, 'threshold': 10, 'maxleaf': 64, 'num_slices': 5, 'n_feature': 128, 'n_clusters': 10, 'tree_lr': 0.1, 'n_trees': 200, 'embsize': 20, 'emb_lr': 0.001, 'emb_epochs': 3, 'tree_layers': [100, 100, 100, 50, 20], 'embedding_size': 20, 'cate_layers': [16, 16], 'online_epochs': 1, 'online_bz': 4096, 'num_splits': 5, 'early-stopping': 20}
+Preprocess data for CatNN...
+Preprocess data for GBDT2NN...
+
+################### Train model #######################################
+
+
+Train GBDT and distill knowledge from it...
+[LightGBM] [Info] Number of positive: 6273, number of negative: 19776
+[LightGBM] [Warning] Auto-choosing row-wise multi-threading, the overhead of testing was 0.008806 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 649
+[LightGBM] [Info] Number of data points in the train set: 26049, number of used features: 33
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.240815 -> initscore=-1.148214
+[LightGBM] [Info] Start training from score -1.148214
+Training until validation scores don't improve for 20 rounds
+Early stopping, best iteration is:
+[67]	valid_0's auc: 0.923909
+Model Interpreting...
+[(14,), (14,), (13,), (13,), (13,)]
+
+Train embedding model...
+Epoch 1: training loss 0.788
+Test Loss of 0.345167, Test AUC of 0.893960
+Epoch 2: training loss 0.402
+Test Loss of 0.305106, Test AUC of 0.911669
+Epoch 3: training loss 0.327
+Test Loss of 0.298082, Test AUC of 0.916868
+Finished Training
+
+Train DeepGBM model...
+Init GBDT2NN succeed!
+Init fm part
+Init fm part succeed
+Init deep part
+Init deep part succeed
+Init CatNN succeed!
+Init DeepGBM succeed!
+Epoch 1: training loss 0.702
+Test Loss of 0.694898, Test AUC of 0.898763
+Epoch 2: training loss 0.695
+Test Loss of 0.694242, Test AUC of 0.901849
+Epoch 3: training loss 0.694
+Test Loss of 0.693901, Test AUC of 0.903019
+Finished Training
+
+################### Make predictions #######################################
+
+{'Log Loss - mean': 0.692179052351782, 'Log Loss - std': 0.0013720411099453975, 'AUC - mean': 0.9049499792835913, 'AUC - std': 0.004105236631633952, 'Accuracy - mean': 0.24080955458200964, 'Accuracy - std': 4.662759153777341e-05, 'F1 score - mean': 0.24080955458200964, 'F1 score - std': 4.662759153777341e-05}
+Results: {'Log Loss - mean': 0.692179052351782, 'Log Loss - std': 0.0013720411099453975, 'AUC - mean': 0.9049499792835913, 'AUC - std': 0.004105236631633952, 'Accuracy - mean': 0.24080955458200964, 'Accuracy - std': 4.662759153777341e-05, 'F1 score - mean': 0.24080955458200964, 'F1 score - std': 4.662759153777341e-05}
+Train time: 35.6849227032
+Inference time: 0.44304752660000446
+Finished cross validation
+{'Log Loss - mean': 0.692179052351782, 'Log Loss - std': 0.0013720411099453975, 'AUC - mean': 0.9049499792835913, 'AUC - std': 0.004105236631633952, 'Accuracy - mean': 0.24080955458200964, 'Accuracy - std': 4.662759153777341e-05, 'F1 score - mean': 0.24080955458200964, 'F1 score - std': 4.662759153777341e-05}
+(35.6849227032, 0.44304752660000446)
+
+
+----------------------------------------------------------------------------
+Training TabNet with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/pytorch_tabnet/abstract_model.py:82: UserWarning: Device used : cpu
+  warnings.warn(f"Device used : {self.device}")
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/pytorch_tabnet/abstract_model.py:82: UserWarning: Device used : cpu
+  warnings.warn(f"Device used : {self.device}")
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/pytorch_tabnet/callbacks.py:172: UserWarning: Best weights from best epoch are automatically used!
+  warnings.warn(wrn_msg)
+Namespace(config='config/adult.yml', model_name='TabNet', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+epoch 0  | loss: 0.39562 | eval_logloss: 0.35918 |  0:00:02s
+epoch 1  | loss: 0.34924 | eval_logloss: 0.33656 |  0:00:05s
+epoch 2  | loss: 0.33367 | eval_logloss: 0.33911 |  0:00:08s
+Stop training because you reached max_epochs = 3 with best_epoch = 1 and best_eval_logloss = 0.33656
+Traceback (most recent call last):
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 154, in <module>
+    main_once(arguments)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 138, in main_once
+    sc, time = cross_validation(model, X, y, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 50, in cross_validation
+    curr_model.predict(X_test)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/basemodel_torch.py", line 123, in predict
+    self.predict_proba(X)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/basemodel_torch.py", line 129, in predict_proba
+    probas = self.predict_helper(X)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/tabnet.py", line 48, in predict_helper
+    X = np.array(X, dtype=np.float)
+                          ^^^^^^^^
+  File "/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'cfloat'?
+
+
+----------------------------------------------------------------------------
+Training DeepFM with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/adult.yml', model_name='DeepFM', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+cpu
+Train on 26048 samples, validate on 6513 samples, 204 steps per epoch
+0it [00:00, ?it/s]18it [00:00, 178.56it/s]38it [00:00, 186.19it/s]58it [00:00, 188.69it/s]78it [00:00, 189.84it/s]98it [00:00, 190.52it/s]118it [00:00, 190.91it/s]138it [00:00, 191.10it/s]158it [00:00, 191.24it/s]178it [00:00, 191.28it/s]198it [00:01, 191.30it/s]204it [00:01, 190.23it/s]
+Epoch 1/3
+1s - loss:  0.3819 - binary_crossentropy:  0.3817 - val_binary_crossentropy:  0.3298
+0it [00:00, ?it/s]20it [00:00, 195.81it/s]40it [00:00, 196.60it/s]60it [00:00, 196.79it/s]80it [00:00, 194.03it/s]100it [00:00, 194.54it/s]120it [00:00, 195.36it/s]140it [00:00, 195.98it/s]160it [00:00, 196.39it/s]180it [00:00, 196.57it/s]200it [00:01, 196.70it/s]204it [00:01, 196.00it/s]
+Epoch 2/3
+1s - loss:  0.3138 - binary_crossentropy:  0.3142 - val_binary_crossentropy:  0.3204
+0it [00:00, ?it/s]20it [00:00, 196.34it/s]40it [00:00, 196.90it/s]60it [00:00, 197.12it/s]80it [00:00, 197.18it/s]100it [00:00, 197.23it/s]120it [00:00, 197.22it/s]140it [00:00, 197.26it/s]160it [00:00, 197.24it/s]180it [00:00, 197.21it/s]200it [00:01, 197.24it/s]204it [00:01, 197.10it/s]
+Epoch 3/3
+1s - loss:  0.3079 - binary_crossentropy:  0.3079 - val_binary_crossentropy:  0.3187
+{'Log Loss - mean': 0.3186642382013196, 'Log Loss - std': 0.0, 'AUC - mean': 0.9069014646642781, 'AUC - std': 0.0, 'Accuracy - mean': 0.8484569322892677, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8484569322892677, 'F1 score - std': 0.0}
+cpu
+Train on 26049 samples, validate on 6512 samples, 204 steps per epoch
+0it [00:00, ?it/s]19it [00:00, 188.61it/s]39it [00:00, 190.44it/s]59it [00:00, 191.03it/s]79it [00:00, 191.28it/s]99it [00:00, 191.47it/s]119it [00:00, 191.41it/s]139it [00:00, 191.56it/s]159it [00:00, 191.61it/s]179it [00:00, 191.68it/s]199it [00:01, 191.67it/s]204it [00:01, 191.33it/s]
+Epoch 1/3
+1s - loss:  0.3839 - binary_crossentropy:  0.3837 - val_binary_crossentropy:  0.3196
+0it [00:00, ?it/s]20it [00:00, 196.54it/s]40it [00:00, 197.11it/s]60it [00:00, 197.19it/s]80it [00:00, 197.28it/s]100it [00:00, 197.25it/s]120it [00:00, 197.36it/s]140it [00:00, 197.35it/s]160it [00:00, 197.32it/s]180it [00:00, 197.31it/s]200it [00:01, 197.28it/s]204it [00:01, 197.18it/s]
+Epoch 2/3
+1s - loss:  0.3164 - binary_crossentropy:  0.3164 - val_binary_crossentropy:  0.3089
+0it [00:00, ?it/s]20it [00:00, 196.44it/s]40it [00:00, 197.03it/s]60it [00:00, 197.24it/s]80it [00:00, 197.27it/s]100it [00:00, 197.30it/s]120it [00:00, 197.34it/s]140it [00:00, 197.40it/s]160it [00:00, 197.10it/s]180it [00:00, 197.21it/s]200it [00:01, 197.26it/s]204it [00:01, 197.15it/s]
+Epoch 3/3
+1s - loss:  0.3101 - binary_crossentropy:  0.3103 - val_binary_crossentropy:  0.3058
+{'Log Loss - mean': 0.3122234243599518, 'Log Loss - std': 0.0064408138413677984, 'AUC - mean': 0.9106246516571507, 'AUC - std': 0.0037231869928725514, 'Accuracy - mean': 0.8524379256040933, 'Accuracy - std': 0.003980993314825654, 'F1 score - mean': 0.8524379256040933, 'F1 score - std': 0.003980993314825654}
+cpu
+Train on 26049 samples, validate on 6512 samples, 204 steps per epoch
+0it [00:00, ?it/s]19it [00:00, 188.62it/s]39it [00:00, 190.22it/s]59it [00:00, 190.78it/s]79it [00:00, 191.08it/s]99it [00:00, 191.23it/s]119it [00:00, 191.34it/s]139it [00:00, 191.46it/s]159it [00:00, 191.53it/s]179it [00:00, 191.44it/s]199it [00:01, 191.40it/s]204it [00:01, 191.14it/s]
+Epoch 1/3
+1s - loss:  0.3867 - binary_crossentropy:  0.3864 - val_binary_crossentropy:  0.3137
+0it [00:00, ?it/s]20it [00:00, 196.34it/s]40it [00:00, 196.98it/s]60it [00:00, 197.13it/s]80it [00:00, 197.19it/s]100it [00:00, 197.18it/s]120it [00:00, 197.23it/s]140it [00:00, 197.32it/s]160it [00:00, 197.35it/s]180it [00:00, 197.33it/s]200it [00:01, 196.88it/s]204it [00:01, 197.02it/s]
+Epoch 2/3
+1s - loss:  0.3188 - binary_crossentropy:  0.3189 - val_binary_crossentropy:  0.3072
+0it [00:00, ?it/s]20it [00:00, 196.31it/s]40it [00:00, 197.01it/s]60it [00:00, 197.19it/s]80it [00:00, 197.26it/s]100it [00:00, 197.22it/s]120it [00:00, 197.24it/s]140it [00:00, 197.23it/s]160it [00:00, 197.23it/s]180it [00:00, 197.28it/s]200it [00:01, 197.27it/s]204it [00:01, 197.13it/s]
+Epoch 3/3
+1s - loss:  0.3127 - binary_crossentropy:  0.3127 - val_binary_crossentropy:  0.3024
+{'Log Loss - mean': 0.30895171090404316, 'Log Loss - std': 0.007004589436071003, 'AUC - mean': 0.9130252139936119, 'AUC - std': 0.004557061917332604, 'Accuracy - mean': 0.8544815490923275, 'Accuracy - std': 0.004349520943558027, 'F1 score - mean': 0.8544815490923275, 'F1 score - std': 0.004349520943558027}
+cpu
+Train on 26049 samples, validate on 6512 samples, 204 steps per epoch
+0it [00:00, ?it/s]19it [00:00, 188.57it/s]39it [00:00, 190.18it/s]59it [00:00, 190.68it/s]79it [00:00, 190.97it/s]99it [00:00, 191.10it/s]119it [00:00, 191.20it/s]139it [00:00, 191.20it/s]159it [00:00, 191.25it/s]179it [00:00, 191.25it/s]199it [00:01, 191.28it/s]204it [00:01, 190.99it/s]
+Epoch 1/3
+1s - loss:  0.3836 - binary_crossentropy:  0.3835 - val_binary_crossentropy:  0.3245
+0it [00:00, ?it/s]20it [00:00, 196.10it/s]40it [00:00, 196.49it/s]60it [00:00, 196.70it/s]80it [00:00, 196.77it/s]100it [00:00, 191.00it/s]120it [00:00, 193.13it/s]140it [00:00, 194.50it/s]160it [00:00, 195.42it/s]180it [00:00, 196.03it/s]200it [00:01, 196.45it/s]204it [00:01, 195.36it/s]
+Epoch 2/3
+1s - loss:  0.3168 - binary_crossentropy:  0.3168 - val_binary_crossentropy:  0.3112
+0it [00:00, ?it/s]20it [00:00, 196.62it/s]40it [00:00, 197.10it/s]60it [00:00, 197.26it/s]80it [00:00, 197.30it/s]100it [00:00, 197.32it/s]120it [00:00, 197.28it/s]140it [00:00, 197.30it/s]160it [00:00, 197.25it/s]180it [00:00, 197.25it/s]200it [00:01, 197.23it/s]204it [00:01, 197.15it/s]
+Epoch 3/3
+1s - loss:  0.3106 - binary_crossentropy:  0.3107 - val_binary_crossentropy:  0.3083
+{'Log Loss - mean': 0.3087896327787111, 'Log Loss - std': 0.006072644632453937, 'AUC - mean': 0.9131674395822078, 'AUC - std': 0.003954212227859886, 'Accuracy - mean': 0.8557720954801793, 'Accuracy - std': 0.004380100371729991, 'F1 score - mean': 0.8557720954801793, 'F1 score - std': 0.004380100371729991}
+cpu
+Train on 26049 samples, validate on 6512 samples, 204 steps per epoch
+0it [00:00, ?it/s]19it [00:00, 188.90it/s]39it [00:00, 190.62it/s]59it [00:00, 191.26it/s]79it [00:00, 191.46it/s]99it [00:00, 191.59it/s]119it [00:00, 191.65it/s]139it [00:00, 191.68it/s]159it [00:00, 191.76it/s]179it [00:00, 191.87it/s]199it [00:01, 191.94it/s]204it [00:01, 191.54it/s]
+Epoch 1/3
+1s - loss:  0.3882 - binary_crossentropy:  0.3880 - val_binary_crossentropy:  0.3270
+0it [00:00, ?it/s]20it [00:00, 196.43it/s]40it [00:00, 197.12it/s]60it [00:00, 197.27it/s]80it [00:00, 197.38it/s]100it [00:00, 197.44it/s]120it [00:00, 197.47it/s]140it [00:00, 197.41it/s]160it [00:00, 197.45it/s]180it [00:00, 197.49it/s]200it [00:01, 197.48it/s]204it [00:01, 197.31it/s]
+Epoch 2/3
+1s - loss:  0.3158 - binary_crossentropy:  0.3160 - val_binary_crossentropy:  0.3180
+0it [00:00, ?it/s]20it [00:00, 196.38it/s]40it [00:00, 196.06it/s]60it [00:00, 196.76it/s]80it [00:00, 197.06it/s]100it [00:00, 197.19it/s]120it [00:00, 197.22it/s]140it [00:00, 197.28it/s]160it [00:00, 197.30it/s]180it [00:00, 197.36it/s]200it [00:01, 197.38it/s]204it [00:01, 197.10it/s]
+Epoch 3/3
+1s - loss:  0.3087 - binary_crossentropy:  0.3089 - val_binary_crossentropy:  0.3151
+{'Log Loss - mean': 0.31004543950758157, 'Log Loss - std': 0.005984130047614493, 'AUC - mean': 0.9123761196616054, 'AUC - std': 0.0038747108719663615, 'Accuracy - mean': 0.8554407722072392, 'Accuracy - std': 0.003973326548109301, 'F1 score - mean': 0.8554407722072392, 'F1 score - std': 0.003973326548109301}
+Results: {'Log Loss - mean': 0.31004543950758157, 'Log Loss - std': 0.005984130047614493, 'AUC - mean': 0.9123761196616054, 'AUC - std': 0.0038747108719663615, 'Accuracy - mean': 0.8554407722072392, 'Accuracy - std': 0.003973326548109301, 'F1 score - mean': 0.8554407722072392, 'F1 score - std': 0.003973326548109301}
+Train time: 3.3981403018000003
+Inference time: 0.055863951799999964
+Finished cross validation
+{'Log Loss - mean': 0.31004543950758157, 'Log Loss - std': 0.005984130047614493, 'AUC - mean': 0.9123761196616054, 'AUC - std': 0.0038747108719663615, 'Accuracy - mean': 0.8554407722072392, 'Accuracy - std': 0.003973326548109301, 'F1 score - mean': 0.8554407722072392, 'F1 score - std': 0.003973326548109301}
+(3.3981403018000003, 0.055863951799999964)
+
+
+----------------------------------------------------------------------------
+Training KNN with config/adult.yml in env sklearn
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/adult.yml', model_name='KNN', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+{'Log Loss - mean': 0.4483103183351917, 'Log Loss - std': 0.0, 'AUC - mean': 0.8582795248143129, 'AUC - std': 0.0, 'Accuracy - mean': 0.8129894058037771, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8129894058037771, 'F1 score - std': 0.0}
+{'Log Loss - mean': 0.43642049238612407, 'Log Loss - std': 0.011889825949067623, 'AUC - mean': 0.8636877908873593, 'AUC - std': 0.005408266073046342, 'Accuracy - mean': 0.8214209928281785, 'Accuracy - std': 0.008431587024401388, 'F1 score - mean': 0.8214209928281785, 'F1 score - std': 0.008431587024401388}
+{'Log Loss - mean': 0.45590824041681755, 'Log Loss - std': 0.029219684358579398, 'AUC - mean': 0.8652090774682102, 'AUC - std': 0.004912045093447725, 'Accuracy - mean': 0.8235148961196866, 'Accuracy - std': 0.007494217892598669, 'F1 score - mean': 0.8235148961196866, 'F1 score - std': 0.007494217892598669}
+{'Log Loss - mean': 0.46358502712496985, 'Log Loss - std': 0.028585689216785524, 'AUC - mean': 0.8645404153441154, 'AUC - std': 0.004408794320292627, 'Accuracy - mean': 0.8229878305664234, 'Accuracy - std': 0.006554072829822638, 'F1 score - mean': 0.8229878305664234, 'F1 score - std': 0.006554072829822638}
+{'Log Loss - mean': 0.4688653073362971, 'Log Loss - std': 0.027662948845693498, 'AUC - mean': 0.8644613463141603, 'AUC - std': 0.003946515112464134, 'Accuracy - mean': 0.8233472669101412, 'Accuracy - std': 0.005906054052210857, 'F1 score - mean': 0.8233472669101412, 'F1 score - std': 0.005906054052210857}
+Results: {'Log Loss - mean': 0.4688653073362971, 'Log Loss - std': 0.027662948845693498, 'AUC - mean': 0.8644613463141603, 'AUC - std': 0.003946515112464134, 'Accuracy - mean': 0.8233472669101412, 'Accuracy - std': 0.005906054052210857, 'F1 score - mean': 0.8233472669101412, 'F1 score - std': 0.005906054052210857}
+Train time: 0.021337811599999857
+Inference time: 0.5276064497999999
+Finished cross validation
+{'Log Loss - mean': 0.4688653073362971, 'Log Loss - std': 0.027662948845693498, 'AUC - mean': 0.8644613463141603, 'AUC - std': 0.003946515112464134, 'Accuracy - mean': 0.8233472669101412, 'Accuracy - std': 0.005906054052210857, 'F1 score - mean': 0.8233472669101412, 'F1 score - std': 0.005906054052210857}
+(0.021337811599999857, 0.5276064497999999)
+
+
+----------------------------------------------------------------------------
+Training NODE with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/node_lib/odst.py:17: SyntaxWarning: invalid escape sequence '\i'
+  """
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/qhoptim/pyt/qhadam.py:133: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at /opt/conda/conda-bld/pytorch_1708025569485/work/torch/csrc/utils/python_arg_parser.cpp:1630.)
+  exp_avg.mul_(beta1_adj).add_(1.0 - beta1_adj, d_p)
+Namespace(config='config/adult.yml', model_name='NODE', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+On: cpu
+On Device: cpu
+On: cpu
+On Device: cpu
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_temp_100.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_avg.pth
+Loss 0.50953
+Val Loss: 0.48809
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_best.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_temp_100.pth
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_temp_200.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_avg.pth
+Loss 0.40016
+Val Loss: 0.47468
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_best.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_temp_200.pth
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_temp_300.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_avg.pth
+Loss 0.43101
+Val Loss: 0.46375
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_best.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_temp_300.pth
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_temp_400.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_avg.pth
+Loss 0.42479
+Val Loss: 0.45548
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_best.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_temp_400.pth
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_temp_500.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_avg.pth
+Loss 0.37360
+Val Loss: 0.44931
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_best.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_temp_500.pth
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_temp_600.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_avg.pth
+Loss 0.35789
+Val Loss: 0.43480
+Saved logs/Adult_2024.03.24_17:37:14/checkpoint_best.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_temp_600.pth
+Loaded logs/Adult_2024.03.24_17:37:14/checkpoint_best.pth
+Traceback (most recent call last):
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 154, in <module>
+    main_once(arguments)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 138, in main_once
+    sc, time = cross_validation(model, X, y, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 50, in cross_validation
+    curr_model.predict(X_test)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/basemodel_torch.py", line 123, in predict
+    self.predict_proba(X)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/basemodel_torch.py", line 129, in predict_proba
+    probas = self.predict_helper(X)
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/node.py", line 142, in predict_helper
+    X_test = torch.as_tensor(np.array(X, dtype=np.float), device=self.device, dtype=torch.float32)
+                                               ^^^^^^^^
+  File "/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/numpy/__init__.py", line 324, in __getattr__
+    raise AttributeError(__former_attrs__[attr])
+AttributeError: module 'numpy' has no attribute 'float'.
+`np.float` was a deprecated alias for the builtin `float`. To avoid this error in existing code, use `float` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.float64` here.
+The aliases was originally deprecated in NumPy 1.20; for more details and guidance see the original release note at:
+    https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations. Did you mean: 'cfloat'?
+
+
+----------------------------------------------------------------------------
+Training DANet with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/qhoptim/pyt/qhadam.py:113: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at /opt/conda/conda-bld/pytorch_1708025569485/work/torch/csrc/utils/python_arg_parser.cpp:1630.)
+  d_p.add_(weight_decay, p.data)
+Namespace(config='config/adult.yml', model_name='DANet', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+Device used : cpu
+DANetClassifier(std=None, drop_rate=0, layer=8, base_outdim=96, k=4, clip_value=2, seed=324, verbose=1, optimizer_fn=<class 'qhoptim.pyt.qhadam.QHAdam'>, optimizer_params={'lr': 0.008, 'weight_decay': 1e-05, 'nus': (0.8, 1.0)}, scheduler_fn=<class 'torch.optim.lr_scheduler.StepLR'>, scheduler_params={'gamma': 0.95, 'step_size': 20}, input_dim=None, output_dim=None, device_name='auto')
+Device used : cpu
+DANetClassifier(std=None, drop_rate=0, layer=8, base_outdim=96, k=4, clip_value=2, seed=324, verbose=1, optimizer_fn=<class 'qhoptim.pyt.qhadam.QHAdam'>, optimizer_params={'lr': 0.008, 'weight_decay': 1e-05, 'nus': (0.8, 1.0)}, scheduler_fn=<class 'torch.optim.lr_scheduler.StepLR'>, scheduler_params={'gamma': 0.95, 'step_size': 20}, input_dim=None, output_dim=None, device_name='auto')
+===> Building model ...
+===> Start training ...
+epoch 1  | loss: 0.37605 | valid_accuracy: 0.84109 |  0:00:17s
+Save Best model!!
+Best valid_accuracy:0.84109 on epoch 1
+LR: 0.008
+epoch 2  | loss: 0.32826 | valid_accuracy: 0.83986 |  0:00:33s
+Best valid_accuracy:0.84109 on epoch 1
+LR: 0.008
+epoch 3  | loss: 0.32103 | valid_accuracy: 0.84692 |  0:00:50s
+Save Best model!!
+Best valid_accuracy:0.84692 on epoch 3
+LR: 0.008
+Stop training because you reached max_epochs = 3 with best_epoch = 3 and best_valid_accuracy = 0.84692
+Best weights from best epoch are automatically used!
+{'Log Loss - mean': 0.3281295734123876, 'Log Loss - std': 0.0, 'AUC - mean': 0.9021682744765595, 'AUC - std': 0.0, 'Accuracy - mean': 0.84692154153232, 'Accuracy - std': 0.0, 'F1 score - mean': 0.84692154153232, 'F1 score - std': 0.0}
+Device used : cpu
+DANetClassifier(std=None, drop_rate=0, layer=8, base_outdim=96, k=4, clip_value=2, seed=324, verbose=1, optimizer_fn=<class 'qhoptim.pyt.qhadam.QHAdam'>, optimizer_params={'lr': 0.008, 'weight_decay': 1e-05, 'nus': (0.8, 1.0)}, scheduler_fn=<class 'torch.optim.lr_scheduler.StepLR'>, scheduler_params={'gamma': 0.95, 'step_size': 20}, input_dim=None, output_dim=None, device_name='auto')
+===> Building model ...
+===> Start training ...
+epoch 1  | loss: 0.38534 | valid_accuracy: 0.84413 |  0:00:16s
+Save Best model!!
+Best valid_accuracy:0.84413 on epoch 1
+LR: 0.008
+epoch 2  | loss: 0.32922 | valid_accuracy: 0.84198 |  0:00:33s
+Best valid_accuracy:0.84413 on epoch 1
+LR: 0.008
+epoch 3  | loss: 0.32358 | valid_accuracy: 0.85243 |  0:00:49s
+Save Best model!!
+Best valid_accuracy:0.85243 on epoch 3
+LR: 0.008
+Stop training because you reached max_epochs = 3 with best_epoch = 3 and best_valid_accuracy = 0.85243
+Best weights from best epoch are automatically used!
+{'Log Loss - mean': 0.3218916861997281, 'Log Loss - std': 0.006237887212659526, 'AUC - mean': 0.9062722311348188, 'AUC - std': 0.004103956658259411, 'Accuracy - mean': 0.849673915729305, 'Accuracy - std': 0.0027523741969849302, 'F1 score - mean': 0.849673915729305, 'F1 score - std': 0.0027523741969849302}
+Device used : cpu
+DANetClassifier(std=None, drop_rate=0, layer=8, base_outdim=96, k=4, clip_value=2, seed=324, verbose=1, optimizer_fn=<class 'qhoptim.pyt.qhadam.QHAdam'>, optimizer_params={'lr': 0.008, 'weight_decay': 1e-05, 'nus': (0.8, 1.0)}, scheduler_fn=<class 'torch.optim.lr_scheduler.StepLR'>, scheduler_params={'gamma': 0.95, 'step_size': 20}, input_dim=None, output_dim=None, device_name='auto')
+===> Building model ...
+===> Start training ...
+epoch 1  | loss: 0.38018 | valid_accuracy: 0.84889 |  0:00:16s
+Save Best model!!
+Best valid_accuracy:0.84889 on epoch 1
+LR: 0.008
+epoch 2  | loss: 0.33224 | valid_accuracy: 0.85412 |  0:00:33s
+Save Best model!!
+Best valid_accuracy:0.85412 on epoch 2
+LR: 0.008
+epoch 3  | loss: 0.32541 | valid_accuracy: 0.8558  |  0:00:49s
+Save Best model!!
+Best valid_accuracy:0.85580 on epoch 3
+LR: 0.008
+Stop training because you reached max_epochs = 3 with best_epoch = 3 and best_valid_accuracy = 0.8558
+Best weights from best epoch are automatically used!
+{'Log Loss - mean': 0.32065455388158165, 'Log Loss - std': 0.005385333539386905, 'AUC - mean': 0.9077920877110622, 'AUC - std': 0.003980984157208989, 'Accuracy - mean': 0.8517174999210928, 'Accuracy - std': 0.003660990099868535, 'F1 score - mean': 0.8517174999210928, 'F1 score - std': 0.003660990099868535}
+Device used : cpu
+DANetClassifier(std=None, drop_rate=0, layer=8, base_outdim=96, k=4, clip_value=2, seed=324, verbose=1, optimizer_fn=<class 'qhoptim.pyt.qhadam.QHAdam'>, optimizer_params={'lr': 0.008, 'weight_decay': 1e-05, 'nus': (0.8, 1.0)}, scheduler_fn=<class 'torch.optim.lr_scheduler.StepLR'>, scheduler_params={'gamma': 0.95, 'step_size': 20}, input_dim=None, output_dim=None, device_name='auto')
+===> Building model ...
+===> Start training ...
+epoch 1  | loss: 0.38693 | valid_accuracy: 0.84137 |  0:00:16s
+Save Best model!!
+Best valid_accuracy:0.84137 on epoch 1
+LR: 0.008
+epoch 2  | loss: 0.33125 | valid_accuracy: 0.84659 |  0:00:33s
+Save Best model!!
+Best valid_accuracy:0.84659 on epoch 2
+LR: 0.008
+epoch 3  | loss: 0.32245 | valid_accuracy: 0.85427 |  0:00:49s
+Save Best model!!
+Best valid_accuracy:0.85427 on epoch 3
+LR: 0.008
+Stop training because you reached max_epochs = 3 with best_epoch = 3 and best_valid_accuracy = 0.85427
+Best weights from best epoch are automatically used!
+{'Log Loss - mean': 0.3219649849365565, 'Log Loss - std': 0.005186815173819259, 'AUC - mean': 0.9070320588051414, 'AUC - std': 0.0036904075599407393, 'Accuracy - mean': 0.8523553853830801, 'Accuracy - std': 0.0033575035325887044, 'F1 score - mean': 0.8523553853830801, 'F1 score - std': 0.0033575035325887044}
+Device used : cpu
+DANetClassifier(std=None, drop_rate=0, layer=8, base_outdim=96, k=4, clip_value=2, seed=324, verbose=1, optimizer_fn=<class 'qhoptim.pyt.qhadam.QHAdam'>, optimizer_params={'lr': 0.008, 'weight_decay': 1e-05, 'nus': (0.8, 1.0)}, scheduler_fn=<class 'torch.optim.lr_scheduler.StepLR'>, scheduler_params={'gamma': 0.95, 'step_size': 20}, input_dim=None, output_dim=None, device_name='auto')
+===> Building model ...
+===> Start training ...
+epoch 1  | loss: 0.38233 | valid_accuracy: 0.84168 |  0:00:16s
+Save Best model!!
+Best valid_accuracy:0.84168 on epoch 1
+LR: 0.008
+epoch 2  | loss: 0.32929 | valid_accuracy: 0.83784 |  0:00:33s
+Best valid_accuracy:0.84168 on epoch 1
+LR: 0.008
+epoch 3  | loss: 0.32277 | valid_accuracy: 0.85243 |  0:00:50s
+Save Best model!!
+Best valid_accuracy:0.85243 on epoch 3
+LR: 0.008
+Stop training because you reached max_epochs = 3 with best_epoch = 3 and best_valid_accuracy = 0.85243
+Best weights from best epoch are automatically used!
+{'Log Loss - mean': 0.32179947586524643, 'Log Loss - std': 0.004651022933574187, 'AUC - mean': 0.9070454570797779, 'AUC - std': 0.003300909635513693, 'Accuracy - mean': 0.852369566291722, 'Accuracy - std': 0.003003176380060977, 'F1 score - mean': 0.852369566291722, 'F1 score - std': 0.003003176380060977}
+Results: {'Log Loss - mean': 0.32179947586524643, 'Log Loss - std': 0.004651022933574187, 'AUC - mean': 0.9070454570797779, 'AUC - std': 0.003300909635513693, 'Accuracy - mean': 0.852369566291722, 'Accuracy - std': 0.003003176380060977, 'F1 score - mean': 0.852369566291722, 'F1 score - std': 0.003003176380060977}
+Train time: 49.78891564440001
+Inference time: 0.8779588966000034
+Finished cross validation
+{'Log Loss - mean': 0.32179947586524643, 'Log Loss - std': 0.004651022933574187, 'AUC - mean': 0.9070454570797779, 'AUC - std': 0.003300909635513693, 'Accuracy - mean': 0.852369566291722, 'Accuracy - std': 0.003003176380060977, 'F1 score - mean': 0.852369566291722, 'F1 score - std': 0.003003176380060977}
+(49.78891564440001, 0.8779588966000034)
+
+
+----------------------------------------------------------------------------
+Training XGBoost with config/adult.yml in env gbdt
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/adult.yml', model_name='XGBoost', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+[0]	eval-auc:0.86797
+[2]	eval-auc:0.88350
+{'Log Loss - mean': 0.6123635053261938, 'Log Loss - std': 0.0, 'AUC - mean': 0.8835045563207864, 'AUC - std': 0.0, 'Accuracy - mean': 0.8444649163212038, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8444649163212038, 'F1 score - std': 0.0}
+[0]	eval-auc:0.88014
+[2]	eval-auc:0.88645
+{'Log Loss - mean': 0.6122149632595795, 'Log Loss - std': 0.0001485420666142434, 'AUC - mean': 0.8849799807250356, 'AUC - std': 0.0014754244042491926, 'Accuracy - mean': 0.8495205416986855, 'Accuracy - std': 0.005055625377481665, 'F1 score - mean': 0.8495205416986855, 'F1 score - std': 0.005055625377481665}
+[0]	eval-auc:0.88694
+[2]	eval-auc:0.90245
+{'Log Loss - mean': 0.6115233200228909, 'Log Loss - std': 0.0009856219174122524, 'AUC - mean': 0.8908021521944396, 'AUC - std': 0.008321454962127715, 'Accuracy - mean': 0.8520247509768469, 'Accuracy - std': 0.005438905544557347, 'F1 score - mean': 0.8520247509768469, 'F1 score - std': 0.005438905544557347}
+[0]	eval-auc:0.87333
+[2]	eval-auc:0.88741
+{'Log Loss - mean': 0.6112470607906131, 'Log Loss - std': 0.0009785424943858103, 'AUC - mean': 0.8899549299563773, 'AUC - std': 0.007354475921304124, 'Accuracy - mean': 0.852892948982021, 'Accuracy - std': 0.004944448752947799, 'F1 score - mean': 0.852892948982021, 'F1 score - std': 0.004944448752947799}
+[0]	eval-auc:0.87763
+[2]	eval-auc:0.88763
+{'Log Loss - mean': 0.6113239964435355, 'Log Loss - std': 0.000888657813456559, 'AUC - mean': 0.889490984059052, 'AUC - std': 0.006643164610651566, 'Accuracy - mean': 0.8527996171708747, 'Accuracy - std': 0.004426387023782371, 'F1 score - mean': 0.8527996171708747, 'F1 score - std': 0.004426387023782371}
+Results: {'Log Loss - mean': 0.6113239964435355, 'Log Loss - std': 0.000888657813456559, 'AUC - mean': 0.889490984059052, 'AUC - std': 0.006643164610651566, 'Accuracy - mean': 0.8527996171708747, 'Accuracy - std': 0.004426387023782371, 'F1 score - mean': 0.8527996171708747, 'F1 score - std': 0.004426387023782371}
+Train time: 20.5859968222
+Inference time: 0.006030259800004956
+Finished cross validation
+{'Log Loss - mean': 0.6113239964435355, 'Log Loss - std': 0.000888657813456559, 'AUC - mean': 0.889490984059052, 'AUC - std': 0.006643164610651566, 'Accuracy - mean': 0.8527996171708747, 'Accuracy - std': 0.004426387023782371, 'F1 score - mean': 0.8527996171708747, 'F1 score - std': 0.004426387023782371}
+(20.5859968222, 0.006030259800004956)
+
+
+----------------------------------------------------------------------------
+Training TabTransformer with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Namespace(config='config/adult.yml', model_name='TabTransformer', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+[9, 16, 7, 15, 6, 5, 2, 42]
+On Device: cpu
+Using dim 128 and batch size 128
+On Device: cpu
+[9, 16, 7, 15, 6, 5, 2, 42]
+On Device: cpu
+Using dim 128 and batch size 128
+On Device: cpu
+Epoch 0: Val Loss 0.41351
+Epoch 1: Val Loss 0.38405
+Epoch 2: Val Loss 0.37511
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.37451086878199125, 'Log Loss - std': 0.0, 'AUC - mean': 0.8676511537247767, 'AUC - std': 0.0, 'Accuracy - mean': 0.8231229847996315, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8231229847996315, 'F1 score - std': 0.0}
+[9, 16, 7, 15, 6, 5, 2, 42]
+On Device: cpu
+Using dim 128 and batch size 128
+On Device: cpu
+Epoch 0: Val Loss 0.40576
+Epoch 1: Val Loss 0.37624
+Epoch 2: Val Loss 0.36910
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3712823851991124, 'Log Loss - std': 0.0032284835828788605, 'AUC - mean': 0.8709885754052521, 'AUC - std': 0.00333742168047535, 'Accuracy - mean': 0.8251824997708231, 'Accuracy - std': 0.0020595149711916116, 'F1 score - mean': 0.825182499770823, 'F1 score - std': 0.002059514971191556}
+[9, 16, 7, 15, 6, 5, 2, 42]
+On Device: cpu
+Using dim 128 and batch size 128
+On Device: cpu
+Epoch 0: Val Loss 0.40109
+Epoch 1: Val Loss 0.36875
+Epoch 2: Val Loss 0.36190
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3678001067170382, 'Log Loss - std': 0.00558580919384519, 'AUC - mean': 0.8740790274843547, 'AUC - std': 0.005150473481988209, 'Accuracy - mean': 0.8271998810920967, 'Accuracy - std': 0.003311704908636676, 'F1 score - mean': 0.8271998810920965, 'F1 score - std': 0.0033117049086366754}
+[9, 16, 7, 15, 6, 5, 2, 42]
+On Device: cpu
+Using dim 128 and batch size 128
+On Device: cpu
+Epoch 0: Val Loss 0.40870
+Epoch 1: Val Loss 0.37422
+Epoch 2: Val Loss 0.36699
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.367500679311949, 'Log Loss - std': 0.00486517405395629, 'AUC - mean': 0.8739841045183085, 'AUC - std': 0.004463469942202677, 'Accuracy - mean': 0.8286308690500308, 'Accuracy - std': 0.003790609668466668, 'F1 score - mean': 0.8286308690500306, 'F1 score - std': 0.003790609668466678}
+[9, 16, 7, 15, 6, 5, 2, 42]
+On Device: cpu
+Using dim 128 and batch size 128
+On Device: cpu
+Epoch 0: Val Loss 0.41287
+Epoch 1: Val Loss 0.37803
+Epoch 2: Val Loss 0.36849
+{'Log Loss - mean': 0.36762391009382267, 'Log Loss - std': 0.0043585178860062485, 'AUC - mean': 0.8737153912776149, 'AUC - std': 0.004028259967138877, 'Accuracy - mean': 0.8288137861491155, 'Accuracy - std': 0.0034101043953944786, 'F1 score - mean': 0.8288137861491155, 'F1 score - std': 0.003410104395394494}
+Results: {'Log Loss - mean': 0.36762391009382267, 'Log Loss - std': 0.0043585178860062485, 'AUC - mean': 0.8737153912776149, 'AUC - std': 0.004028259967138877, 'Accuracy - mean': 0.8288137861491155, 'Accuracy - std': 0.0034101043953944786, 'F1 score - mean': 0.8288137861491155, 'F1 score - std': 0.003410104395394494}
+Train time: 23.5421916678
+Inference time: 0.5496770845999969
+Finished cross validation
+{'Log Loss - mean': 0.36762391009382267, 'Log Loss - std': 0.0043585178860062485, 'AUC - mean': 0.8737153912776149, 'AUC - std': 0.004028259967138877, 'Accuracy - mean': 0.8288137861491155, 'Accuracy - std': 0.0034101043953944786, 'F1 score - mean': 0.8288137861491155, 'F1 score - std': 0.003410104395394494}
+(23.5421916678, 0.5496770845999969)
+
+
+----------------------------------------------------------------------------
+Training RLN with config/adult.yml in env tensorflow
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Using TensorFlow backend.
+WARNING:tensorflow:From /home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+WARNING:tensorflow:From /home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_impl.py:183: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:OMP_NUM_THREADS is no longer used by the default Keras config. To configure the number of threads, use tf.config.threading APIs.
+2024-03-24 18:43:45.846299: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2024-03-24 18:43:46.000232: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: NVIDIA A100-SXM4-80GB major: 8 minor: 0 memoryClockRate(GHz): 1.41
+pciBusID: 0000:c1:00.0
+2024-03-24 18:43:46.038179: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-03-24 18:43:46.471506: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-03-24 18:43:46.703724: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2024-03-24 18:43:46.800051: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2024-03-24 18:43:47.240055: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2024-03-24 18:43:47.529147: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2024-03-24 18:43:48.222361: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2024-03-24 18:43:48.227480: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2024-03-24 18:43:48.228181: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2024-03-24 18:43:48.272963: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1996200000 Hz
+2024-03-24 18:43:48.273195: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x2247f90 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-03-24 18:43:48.273650: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2024-03-24 18:43:48.503380: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x41933a0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-24 18:43:48.503433: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA A100-SXM4-80GB, Compute Capability 8.0
+2024-03-24 18:43:48.504758: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: NVIDIA A100-SXM4-80GB major: 8 minor: 0 memoryClockRate(GHz): 1.41
+pciBusID: 0000:c1:00.0
+2024-03-24 18:43:48.504817: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-03-24 18:43:48.504847: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-03-24 18:43:48.504873: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10.0
+2024-03-24 18:43:48.504897: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10.0
+2024-03-24 18:43:48.504921: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10.0
+2024-03-24 18:43:48.504980: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10.0
+2024-03-24 18:43:48.505008: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2024-03-24 18:43:48.507458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2024-03-24 18:43:48.551547: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.0
+2024-03-24 18:43:48.553574: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2024-03-24 18:43:48.553605: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2024-03-24 18:43:48.553623: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2024-03-24 18:43:48.556499: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 76595 MB memory) -> physical GPU (device: 0, name: NVIDIA A100-SXM4-80GB, pci bus id: 0000:c1:00.0, compute capability: 8.0)
+WARNING:tensorflow:From /home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:422: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+2024-03-24 18:44:11.134405: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10.0
+2024-03-24 18:44:15.916759: E tensorflow/stream_executor/cuda/cuda_blas.cc:428] failed to run cuBLAS routine: CUBLAS_STATUS_EXECUTION_FAILED
+Namespace(batch_size=128, cat_dims=[9, 16, 7, 15, 6, 5, 2, 42], cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], config='config/adult.yml', data_parallel=True, dataset='Adult', direction='maximize', early_stopping_rounds=20, epochs=3, gpu_ids=[0, 1], logging_period=100, model_name='RLN', n_trials=2, num_classes=1, num_features=14, num_splits=5, objective='binary', one_hot_encode=False, optimize_hyperparameters=False, scale=True, seed=221, shuffle=True, target_encode=True, use_gpu=True, val_batch_size=256)
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+Train on 26048 samples, validate on 6513 samples
+Epoch 1/3
+Traceback (most recent call last):
+  File "train.py", line 154, in <module>
+    main_once(arguments)
+  File "train.py", line 138, in main_once
+    sc, time = cross_validation(model, X, y, args)
+  File "train.py", line 44, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/rln.py", line 53, in fit
+    history = self.model.fit(X, y, validation_data=(X_val, y_val))
+  File "/home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/keras/wrappers/scikit_learn.py", line 209, in fit
+    return super(KerasClassifier, self).fit(x, y, **kwargs)
+  File "/home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/keras/wrappers/scikit_learn.py", line 151, in fit
+    history = self.model.fit(x, y, **fit_args)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/rln.py", line 107, in rln_fit
+    return orig_fit(*args, callbacks=rln_callbacks, **fit_kwargs)
+  File "/home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/keras/engine/training.py", line 1239, in fit
+    validation_freq=validation_freq)
+  File "/home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/keras/engine/training_arrays.py", line 196, in fit_loop
+    outs = fit_function(ins_batch)
+  File "/home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/tensorflow_core/python/keras/backend.py", line 3476, in __call__
+    run_metadata=self.run_metadata)
+  File "/home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/tensorflow_core/python/client/session.py", line 1472, in __call__
+    run_metadata_ptr)
+tensorflow.python.framework.errors_impl.InternalError: 2 root error(s) found.
+  (0) Internal: Blas GEMM launch failed : a.shape=(128, 14), b.shape=(14, 8), m=128, n=8, k=14
+	 [[{{node dense_1/MatMul}}]]
+  (1) Internal: Blas GEMM launch failed : a.shape=(128, 14), b.shape=(14, 8), m=128, n=8, k=14
+	 [[{{node dense_1/MatMul}}]]
+	 [[Mean/_109]]
+0 successful operations.
+0 derived errors ignored.
+
+
+----------------------------------------------------------------------------
+Training DNFNet with config/adult.yml in env tensorflow
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf.py:54: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf.py:55: The name tf.random.set_random_seed is deprecated. Please use tf.compat.v1.random.set_random_seed instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/ModelHandler.py:125: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/DNFNetComponents.py:52: The name tf.get_variable is deprecated. Please use tf.compat.v1.get_variable instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/DNFNetComponents.py:57: The name tf.diag_part is deprecated. Please use tf.linalg.tensor_diag_part instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/DNFNetComponents.py:60: div (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Deprecated in favor of operator or tf.math.divide.
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/DNFNetComponents.py:162: The name tf.sparse.matmul is deprecated. Please use tf.sparse.sparse_dense_matmul instead.
+
+WARNING:tensorflow:
+The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+  * https://github.com/tensorflow/io (for I/O related ops)
+If you depend on functionality not listed there, please file an issue.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/model1.py:56: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.Dense instead.
+WARNING:tensorflow:From /home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/tensorflow_core/python/layers/core.py:187: Layer.apply (from tensorflow.python.keras.engine.base_layer) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `layer.__call__` method instead.
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/model1.py:58: The name tf.variable_scope is deprecated. Please use tf.compat.v1.variable_scope instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/model1.py:63: The name tf.losses.sigmoid_cross_entropy is deprecated. Please use tf.compat.v1.losses.sigmoid_cross_entropy instead.
+
+WARNING:tensorflow:From /home/marwan.housni/.conda/envs/tensorflow/lib/python3.7/site-packages/tensorflow_core/python/ops/nn_impl.py:183: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/model1.py:67: The name tf.losses.get_regularization_loss is deprecated. Please use tf.compat.v1.losses.get_regularization_loss instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/DNFNetModels/model1.py:71: The name tf.train.AdamOptimizer is deprecated. Please use tf.compat.v1.train.AdamOptimizer instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/ModelHandler.py:150: The name tf.Session is deprecated. Please use tf.compat.v1.Session instead.
+
+2024-03-24 18:44:24.175400: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2024-03-24 18:44:24.233695: E tensorflow/stream_executor/cuda/cuda_driver.cc:318] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+2024-03-24 18:44:24.233756: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:169] retrieving CUDA diagnostic information for host: slurm-a100-gpu-h22a2-u18-sv
+2024-03-24 18:44:24.233777: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:176] hostname: slurm-a100-gpu-h22a2-u18-sv
+2024-03-24 18:44:24.233894: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:200] libcuda reported version is: 535.154.5
+2024-03-24 18:44:24.233932: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:204] kernel reported version is: 535.154.5
+2024-03-24 18:44:24.233951: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:310] kernel version seems to match DSO: 535.154.5
+2024-03-24 18:44:24.234116: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2024-03-24 18:44:24.249982: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 1996200000 Hz
+2024-03-24 18:44:24.250178: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x15ba2d0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-03-24 18:44:24.250226: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/ModelHandler.py:168: The name tf.global_variables_initializer is deprecated. Please use tf.compat.v1.global_variables_initializer instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/ModelHandler.py:169: The name tf.train.Saver is deprecated. Please use tf.compat.v1.train.Saver instead.
+
+WARNING:tensorflow:From /srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/dnf_lib/DNFNet/ModelHandler.py:169: The name tf.global_variables is deprecated. Please use tf.compat.v1.global_variables instead.
+
+Namespace(batch_size=128, cat_dims=[9, 16, 7, 15, 6, 5, 2, 42], cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], config='config/adult.yml', data_parallel=True, dataset='Adult', direction='maximize', early_stopping_rounds=20, epochs=3, gpu_ids=[0, 1], logging_period=100, model_name='DNFNet', n_trials=2, num_classes=1, num_features=14, num_splits=5, objective='binary', one_hot_encode=False, optimize_hyperparameters=False, scale=True, seed=221, shuffle=True, target_encode=True, use_gpu=True, val_batch_size=256)
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+{'n_conjunctions_arr': [6, 9, 12, 15], 'conjunctions_depth_arr': [2, 4, 6], 'keep_feature_prob_arr': [0.1, 0.3, 0.5, 0.7, 0.9], 'initial_lr': 0.05, 'lr_decay_factor': 0.5, 'lr_patience': 10, 'min_lr': 1e-06, 'early_stopping_patience': 20, 'epochs': 3, 'batch_size': 128, 'apply_standardization': True, 'save_weights': True, 'starting_epoch_to_save': 0, 'models_module_name': 'models.dnf_lib.DNFNet.DNFNetModels', 'models_dir': 'models/dnf_lib/DNFNet/DNFNetModels', 'model_number': 1, 'experiments_dir': 'output/DNFNet/experiments/Adult', 'competition_name': 'Adult', 'model_name': 'DNFNet', 'n_formulas': 64, 'orthogonal_lambda': 0.0, 'elastic_net_beta': 1.3, 'random_seed': 1306, 'input_dim': 14, 'output_dim': 1, 'translate_label_to_one_hot': False, 'experiment_number': 1, 'GPU': '[0, 1]', 'n_forumlas': 1024}
+{'n_conjunctions_arr': [6, 9, 12, 15], 'conjunctions_depth_arr': [2, 4, 6], 'keep_feature_prob_arr': [0.1, 0.3, 0.5, 0.7, 0.9], 'initial_lr': 0.05, 'lr_decay_factor': 0.5, 'lr_patience': 10, 'min_lr': 1e-06, 'early_stopping_patience': 20, 'epochs': 3, 'batch_size': 128, 'apply_standardization': True, 'save_weights': True, 'starting_epoch_to_save': 0, 'models_module_name': 'models.dnf_lib.DNFNet.DNFNetModels', 'models_dir': 'models/dnf_lib/DNFNet/DNFNetModels', 'model_number': 1, 'experiments_dir': 'output/DNFNet/experiments/Adult', 'competition_name': 'Adult', 'model_name': 'DNFNet', 'n_formulas': 64, 'orthogonal_lambda': 0.0, 'elastic_net_beta': 1.3, 'random_seed': 1306, 'input_dim': 14, 'output_dim': 1, 'translate_label_to_one_hot': False, 'experiment_number': 1, 'GPU': '[0, 1]', 'n_forumlas': 1024}
+Build optimizer
+Epoch: 0, loss: 0.493480, val loss: 0.401061, score: 0.387253
+Val score improved from inf to 0.38725299835513943
+saving model weights.
+Epoch: 1, loss: 0.366083, val loss: 0.362207, score: 0.355958
+Val score improved from 0.38725299835513943 to 0.35595806834439375
+saving model weights.
+Epoch: 2, loss: 0.341517, val loss: 0.345402, score: 0.338620
+Val score improved from 0.35595806834439375 to 0.33861964912011216
+saving model weights.
+Best validation score: 0.33861964912011216
+{'Log Loss - mean': 0.3386196490243059, 'Log Loss - std': 0.0, 'AUC - mean': 0.8972916034990234, 'AUC - std': 0.0, 'Accuracy - mean': 0.8350990327038231, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8350990327038232, 'F1 score - std': 0.0}
+{'n_conjunctions_arr': [6, 9, 12, 15], 'conjunctions_depth_arr': [2, 4, 6], 'keep_feature_prob_arr': [0.1, 0.3, 0.5, 0.7, 0.9], 'initial_lr': 0.05, 'lr_decay_factor': 0.5, 'lr_patience': 10, 'min_lr': 1e-06, 'early_stopping_patience': 20, 'epochs': 3, 'batch_size': 128, 'apply_standardization': True, 'save_weights': True, 'starting_epoch_to_save': 0, 'models_module_name': 'models.dnf_lib.DNFNet.DNFNetModels', 'models_dir': 'models/dnf_lib/DNFNet/DNFNetModels', 'model_number': 1, 'experiments_dir': 'output/DNFNet/experiments/Adult', 'competition_name': 'Adult', 'model_name': 'DNFNet', 'n_formulas': 64, 'orthogonal_lambda': 0.0, 'elastic_net_beta': 1.3, 'random_seed': 1306, 'input_dim': 14, 'output_dim': 1, 'translate_label_to_one_hot': False, 'experiment_number': 1, 'GPU': '[0, 1]', 'n_forumlas': 1024}
+Build optimizer
+Epoch: 0, loss: 0.490832, val loss: 0.390771, score: 0.381672
+Val score improved from inf to 0.38167154256378
+saving model weights.
+Epoch: 1, loss: 0.364324, val loss: 0.349572, score: 0.340490
+Val score improved from 0.38167154256378 to 0.34048966970895383
+saving model weights.
+Epoch: 2, loss: 0.345700, val loss: 0.337085, score: 0.331856
+Val score improved from 0.34048966970895383 to 0.3318556922997625
+saving model weights.
+Best validation score: 0.3318556922997625
+{'Log Loss - mean': 0.33523767069542854, 'Log Loss - std': 0.0033819783288773775, 'AUC - mean': 0.8990491199335815, 'AUC - std': 0.0017575164345580707, 'Accuracy - mean': 0.8406914082438035, 'Accuracy - std': 0.005592375539980321, 'F1 score - mean': 0.8406914082438035, 'F1 score - std': 0.0055923755399802655}
+{'n_conjunctions_arr': [6, 9, 12, 15], 'conjunctions_depth_arr': [2, 4, 6], 'keep_feature_prob_arr': [0.1, 0.3, 0.5, 0.7, 0.9], 'initial_lr': 0.05, 'lr_decay_factor': 0.5, 'lr_patience': 10, 'min_lr': 1e-06, 'early_stopping_patience': 20, 'epochs': 3, 'batch_size': 128, 'apply_standardization': True, 'save_weights': True, 'starting_epoch_to_save': 0, 'models_module_name': 'models.dnf_lib.DNFNet.DNFNetModels', 'models_dir': 'models/dnf_lib/DNFNet/DNFNetModels', 'model_number': 1, 'experiments_dir': 'output/DNFNet/experiments/Adult', 'competition_name': 'Adult', 'model_name': 'DNFNet', 'n_formulas': 64, 'orthogonal_lambda': 0.0, 'elastic_net_beta': 1.3, 'random_seed': 1306, 'input_dim': 14, 'output_dim': 1, 'translate_label_to_one_hot': False, 'experiment_number': 1, 'GPU': '[0, 1]', 'n_forumlas': 1024}
+Build optimizer
+Epoch: 0, loss: 0.498529, val loss: 0.403240, score: 0.386075
+Val score improved from inf to 0.3860753781301786
+saving model weights.
+Epoch: 1, loss: 0.374530, val loss: 0.348588, score: 0.340825
+Val score improved from 0.3860753781301786 to 0.3408247481960648
+saving model weights.
+Epoch: 2, loss: 0.350435, val loss: 0.332737, score: 0.329174
+Val score improved from 0.3408247481960648 to 0.32917361420762886
+saving model weights.
+Best validation score: 0.32917361420762886
+{'Log Loss - mean': 0.33321631851290173, 'Log Loss - std': 0.003974533209859516, 'AUC - mean': 0.9011185391311387, 'AUC - std': 0.003259483748836812, 'Accuracy - mean': 0.8437840346522982, 'Accuracy - std': 0.006322851597590342, 'F1 score - mean': 0.8437840346522982, 'F1 score - std': 0.006322851597590328}
+{'n_conjunctions_arr': [6, 9, 12, 15], 'conjunctions_depth_arr': [2, 4, 6], 'keep_feature_prob_arr': [0.1, 0.3, 0.5, 0.7, 0.9], 'initial_lr': 0.05, 'lr_decay_factor': 0.5, 'lr_patience': 10, 'min_lr': 1e-06, 'early_stopping_patience': 20, 'epochs': 3, 'batch_size': 128, 'apply_standardization': True, 'save_weights': True, 'starting_epoch_to_save': 0, 'models_module_name': 'models.dnf_lib.DNFNet.DNFNetModels', 'models_dir': 'models/dnf_lib/DNFNet/DNFNetModels', 'model_number': 1, 'experiments_dir': 'output/DNFNet/experiments/Adult', 'competition_name': 'Adult', 'model_name': 'DNFNet', 'n_formulas': 64, 'orthogonal_lambda': 0.0, 'elastic_net_beta': 1.3, 'random_seed': 1306, 'input_dim': 14, 'output_dim': 1, 'translate_label_to_one_hot': False, 'experiment_number': 1, 'GPU': '[0, 1]', 'n_forumlas': 1024}
+Build optimizer
+Epoch: 0, loss: 0.492808, val loss: 0.391757, score: 0.376710
+Val score improved from inf to 0.37670973401988056
+saving model weights.
+Epoch: 1, loss: 0.369431, val loss: 0.353849, score: 0.346589
+Val score improved from 0.37670973401988056 to 0.346589366117085
+saving model weights.
+Epoch: 2, loss: 0.348787, val loss: 0.343601, score: 0.337246
+Val score improved from 0.346589366117085 to 0.33724586605906703
+saving model weights.
+Best validation score: 0.33724586605906703
+{'Log Loss - mean': 0.3342237054301916, 'Log Loss - std': 0.0038590375588464366, 'AUC - mean': 0.9004669192375621, 'AUC - std': 0.003040065984285989, 'Accuracy - mean': 0.8446009252521229, 'Accuracy - std': 0.005655596343455665, 'F1 score - mean': 0.8446009252521229, 'F1 score - std': 0.005655596343455644}
+{'n_conjunctions_arr': [6, 9, 12, 15], 'conjunctions_depth_arr': [2, 4, 6], 'keep_feature_prob_arr': [0.1, 0.3, 0.5, 0.7, 0.9], 'initial_lr': 0.05, 'lr_decay_factor': 0.5, 'lr_patience': 10, 'min_lr': 1e-06, 'early_stopping_patience': 20, 'epochs': 3, 'batch_size': 128, 'apply_standardization': True, 'save_weights': True, 'starting_epoch_to_save': 0, 'models_module_name': 'models.dnf_lib.DNFNet.DNFNetModels', 'models_dir': 'models/dnf_lib/DNFNet/DNFNetModels', 'model_number': 1, 'experiments_dir': 'output/DNFNet/experiments/Adult', 'competition_name': 'Adult', 'model_name': 'DNFNet', 'n_formulas': 64, 'orthogonal_lambda': 0.0, 'elastic_net_beta': 1.3, 'random_seed': 1306, 'input_dim': 14, 'output_dim': 1, 'translate_label_to_one_hot': False, 'experiment_number': 1, 'GPU': '[0, 1]', 'n_forumlas': 1024}
+Build optimizer
+Epoch: 0, loss: 0.493592, val loss: 0.386024, score: 0.376298
+Val score improved from inf to 0.3762977831855105
+saving model weights.
+Epoch: 1, loss: 0.363335, val loss: 0.354276, score: 0.346215
+Val score improved from 0.3762977831855105 to 0.3462154603973992
+saving model weights.
+Epoch: 2, loss: 0.343386, val loss: 0.345621, score: 0.339594
+Val score improved from 0.3462154603973992 to 0.33959411422742636
+saving model weights.
+Best validation score: 0.33959411422742636
+{'Log Loss - mean': 0.3352977872042548, 'Log Loss - std': 0.004065506528585248, 'AUC - mean': 0.8996612903888938, 'AUC - std': 0.0031606569440981707, 'Accuracy - mean': 0.8454903225112806, 'Accuracy - std': 0.00536215683643033, 'F1 score - mean': 0.8454903225112806, 'F1 score - std': 0.005362156836430305}
+Results: {'Log Loss - mean': 0.3352977872042548, 'Log Loss - std': 0.004065506528585248, 'AUC - mean': 0.8996612903888938, 'AUC - std': 0.0031606569440981707, 'Accuracy - mean': 0.8454903225112806, 'Accuracy - std': 0.00536215683643033, 'F1 score - mean': 0.8454903225112806, 'F1 score - std': 0.005362156836430305}
+Train time: 3.2605869536
+Inference time: 0.19165894659999977
+Finished cross validation
+{'Log Loss - mean': 0.3352977872042548, 'Log Loss - std': 0.004065506528585248, 'AUC - mean': 0.8996612903888938, 'AUC - std': 0.0031606569440981707, 'Accuracy - mean': 0.8454903225112806, 'Accuracy - std': 0.00536215683643033, 'F1 score - mean': 0.8454903225112806, 'F1 score - std': 0.005362156836430305}
+(3.2605869536, 0.19165894659999977)
+
+
+----------------------------------------------------------------------------
+Training VIME with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Namespace(config='config/adult.yml', model_name='VIME', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+On Device: cpu
+On Device: cpu
+Fitted encoder
+Epoch 0, Val Loss: 0.39226
+Epoch 1, Val Loss: 0.38363
+Epoch 2, Val Loss: 0.38403
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.38401916848870904, 'Log Loss - std': 0.0, 'AUC - mean': 0.8855939228086241, 'AUC - std': 0.0, 'Accuracy - mean': 0.8281897742975587, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8281897742975587, 'F1 score - std': 0.0}
+On Device: cpu
+Fitted encoder
+Epoch 0, Val Loss: 0.39758
+Epoch 1, Val Loss: 0.39224
+Epoch 2, Val Loss: 0.39062
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3873443449295979, 'Log Loss - std': 0.003325176440888894, 'AUC - mean': 0.8872187455912879, 'AUC - std': 0.0016248227826637374, 'Accuracy - mean': 0.8345494326033248, 'Accuracy - std': 0.006359658305766125, 'F1 score - mean': 0.8345494326033248, 'F1 score - std': 0.006359658305766125}
+On Device: cpu
+Fitted encoder
+Epoch 0, Val Loss: 0.37561
+Epoch 1, Val Loss: 0.37670
+Epoch 2, Val Loss: 0.36880
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3811026814353459, 'Log Loss - std': 0.00923514619590028, 'AUC - mean': 0.8917453551049662, 'AUC - std': 0.006537615780646276, 'Accuracy - mean': 0.8387168207527488, 'Accuracy - std': 0.007854791562266554, 'F1 score - mean': 0.8387168207527488, 'F1 score - std': 0.007854791562266554}
+On Device: cpu
+Fitted encoder
+Epoch 0, Val Loss: 0.39125
+Epoch 1, Val Loss: 0.37222
+Epoch 2, Val Loss: 0.37073
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3785310541339802, 'Log Loss - std': 0.009154547770159218, 'AUC - mean': 0.8909087946881874, 'AUC - std': 0.005844212099528889, 'Accuracy - mean': 0.8368846671616132, 'Accuracy - std': 0.0075062422828952036, 'F1 score - mean': 0.8368846671616132, 'F1 score - std': 0.0075062422828952036}
+On Device: cpu
+Fitted encoder
+Epoch 0, Val Loss: 0.41186
+Epoch 1, Val Loss: 0.39155
+Epoch 2, Val Loss: 0.39746
+{'Log Loss - mean': 0.38119835966690785, 'Log Loss - std': 0.0097725468085268, 'AUC - mean': 0.8868996568621013, 'AUC - std': 0.009571655890473735, 'Accuracy - mean': 0.8337890605106175, 'Accuracy - std': 0.009132691865949408, 'F1 score - mean': 0.8337890605106175, 'F1 score - std': 0.009132691865949408}
+Results: {'Log Loss - mean': 0.38119835966690785, 'Log Loss - std': 0.0097725468085268, 'AUC - mean': 0.8868996568621013, 'AUC - std': 0.009571655890473735, 'Accuracy - mean': 0.8337890605106175, 'Accuracy - std': 0.009132691865949408, 'F1 score - mean': 0.8337890605106175, 'F1 score - std': 0.009132691865949408}
+Train time: 18.480285976999994
+Inference time: 0.04307115259999748
+Finished cross validation
+{'Log Loss - mean': 0.38119835966690785, 'Log Loss - std': 0.0097725468085268, 'AUC - mean': 0.8868996568621013, 'AUC - std': 0.009571655890473735, 'Accuracy - mean': 0.8337890605106175, 'Accuracy - std': 0.009132691865949408, 'F1 score - mean': 0.8337890605106175, 'F1 score - std': 0.009132691865949408}
+(18.480285976999994, 0.04307115259999748)
+
+
+----------------------------------------------------------------------------
+Training MLP with config/adult.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Namespace(config='config/adult.yml', model_name='MLP', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+On Device: cpu
+On Device: cpu
+Epoch 0, Val Loss: 0.41651
+Epoch 1, Val Loss: 0.39805
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epoch 2, Val Loss: 0.35664
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.35626852514052904, 'Log Loss - std': 0.0, 'AUC - mean': 0.8836131015364433, 'AUC - std': 0.0, 'Accuracy - mean': 0.8274220789190849, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8274220789190849, 'F1 score - std': 0.0}
+On Device: cpu
+Epoch 0, Val Loss: 0.39596
+Epoch 1, Val Loss: 0.38450
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epoch 2, Val Loss: 0.39425
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3701846124098505, 'Log Loss - std': 0.013916087269321475, 'AUC - mean': 0.8728181923787495, 'AUC - std': 0.010794909157693933, 'Accuracy - mean': 0.8267177962162993, 'Accuracy - std': 0.0007042827027857189, 'F1 score - mean': 0.8267177962162992, 'F1 score - std': 0.0007042827027857745}
+On Device: cpu
+Epoch 0, Val Loss: 0.39665
+Epoch 1, Val Loss: 0.36923
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epoch 2, Val Loss: 0.35653
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3660042721472969, 'Log Loss - std': 0.012808414396261849, 'AUC - mean': 0.8764033629381215, 'AUC - std': 0.010168264602583457, 'Accuracy - mean': 0.8284281622604976, 'Accuracy - std': 0.002486238141032012, 'F1 score - mean': 0.8284281622604975, 'F1 score - std': 0.002486238141032048}
+On Device: cpu
+Epoch 0, Val Loss: 0.41159
+Epoch 1, Val Loss: 0.38433
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epoch 2, Val Loss: 0.34381
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3602202078570674, 'Log Loss - std': 0.014946832729722402, 'AUC - mean': 0.8801533623272619, 'AUC - std': 0.010942243372671563, 'Accuracy - mean': 0.831318050442302, 'Accuracy - std': 0.0054488894446886186, 'F1 score - mean': 0.8313180504423019, 'F1 score - std': 0.0054488894446886454}
+On Device: cpu
+Epoch 0, Val Loss: 0.40611
+Epoch 1, Val Loss: 0.35986
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 2 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epoch 2, Val Loss: 0.36598
+{'Log Loss - mean': 0.3602467054217654, 'Log Loss - std': 0.01336895865069454, 'AUC - mean': 0.8794968034028571, 'AUC - std': 0.009874736984157223, 'Accuracy - mean': 0.8314549317543329, 'Accuracy - std': 0.004881317744081465, 'F1 score - mean': 0.8314549317543329, 'F1 score - std': 0.00488131774408149}
+Results: {'Log Loss - mean': 0.3602467054217654, 'Log Loss - std': 0.01336895865069454, 'AUC - mean': 0.8794968034028571, 'AUC - std': 0.009874736984157223, 'Accuracy - mean': 0.8314549317543329, 'Accuracy - std': 0.004881317744081465, 'F1 score - mean': 0.8314549317543329, 'F1 score - std': 0.00488131774408149}
+Train time: 1.3660627276000001
+Inference time: 0.033619752400000105
+Finished cross validation
+{'Log Loss - mean': 0.3602467054217654, 'Log Loss - std': 0.01336895865069454, 'AUC - mean': 0.8794968034028571, 'AUC - std': 0.009874736984157223, 'Accuracy - mean': 0.8314549317543329, 'Accuracy - std': 0.004881317744081465, 'F1 score - mean': 0.8314549317543329, 'F1 score - std': 0.00488131774408149}
+(1.3660627276000001, 0.033619752400000105)
+
+
+----------------------------------------------------------------------------
+Training CatBoost with config/adult.yml in env gbdt
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+TBB Warning: The number of workers is currently limited to 0. The request for 127 workers is ignored. Further requests for more workers will be silently ignored until the limit changes.
+
+Namespace(config='config/adult.yml', model_name='CatBoost', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+Traceback (most recent call last):
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 154, in <module>
+    main_once(arguments)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 138, in main_once
+    sc, time = cross_validation(model, X, y, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 44, in cross_validation
+    loss_history, val_loss_history = curr_model.fit(X_train, y_train, X_test, y_test)  # X_val, y_val)
+                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/tree_models.py", line 112, in fit
+    self.model.fit(X, y, eval_set=(X_val, y_val))
+  File "/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/catboost/core.py", line 5201, in fit
+    self._fit(X, y, cat_features, text_features, embedding_features, None, sample_weight, None, None, None, None, baseline, use_best_model,
+  File "/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/catboost/core.py", line 2396, in _fit
+    self._train(
+  File "/home/marwan.housni/.conda/envs/gbdt/lib/python3.11/site-packages/catboost/core.py", line 1776, in _train
+    self._object._train(train_pool, test_pool, params, allow_clear_pool, init_model._object if init_model else None)
+  File "_catboost.pyx", line 4833, in _catboost._CatBoost._train
+  File "_catboost.pyx", line 4882, in _catboost._CatBoost._train
+_catboost.CatBoostError: /src/catboost/catboost/libs/train_lib/dir_helper.cpp:20: Can't create train working dir: output/CatBoost/Adult/catboost_info
+
+
+----------------------------------------------------------------------------
+Training DecisionTree with config/adult.yml in env sklearn
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/adult.yml', model_name='DecisionTree', dataset='Adult', objective='binary', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='maximize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=14, num_classes=1, cat_idx=[1, 3, 5, 6, 7, 8, 9, 13], cat_dims=[9, 16, 7, 15, 6, 5, 2, 42])
+Train model with given hyperparameters
+Loading dataset Adult...
+Dataset loaded!
+(32561, 14)
+Scaling the data...
+{'Log Loss - mean': 0.40767437306381726, 'Log Loss - std': 0.0, 'AUC - mean': 0.8968444668238383, 'AUC - std': 0.0, 'Accuracy - mean': 0.8460003070781514, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8460003070781514, 'F1 score - std': 0.0}
+{'Log Loss - mean': 0.4011293037451882, 'Log Loss - std': 0.006545069318629082, 'AUC - mean': 0.8995392852083659, 'AUC - std': 0.002694818384527564, 'Accuracy - mean': 0.852822020860943, 'Accuracy - std': 0.006821713782791616, 'F1 score - mean': 0.852822020860943, 'F1 score - std': 0.006821713782791616}
+{'Log Loss - mean': 0.4164427955484206, 'Log Loss - std': 0.022306157983968723, 'AUC - mean': 0.8997677474515605, 'AUC - std': 0.002223905141155141, 'Accuracy - mean': 0.8543281121873937, 'Accuracy - std': 0.005963260416089968, 'F1 score - mean': 0.8543281121873937, 'F1 score - std': 0.005963260416089968}
+{'Log Loss - mean': 0.4135170046682285, 'Log Loss - std': 0.019971336205376295, 'AUC - mean': 0.8996802936819684, 'AUC - std': 0.0019319058059568607, 'Accuracy - mean': 0.8540062192756803, 'Accuracy - std': 0.00519434319547841, 'F1 score - mean': 0.8540062192756803, 'F1 score - std': 0.00519434319547841}
+{'Log Loss - mean': 0.4169309239146977, 'Log Loss - std': 0.01912335729803194, 'AUC - mean': 0.8997426792565516, 'AUC - std': 0.0017324479426915325, 'Accuracy - mean': 0.8541816338972028, 'Accuracy - std': 0.004659189000642245, 'F1 score - mean': 0.8541816338972028, 'F1 score - std': 0.004659189000642245}
+Results: {'Log Loss - mean': 0.4169309239146977, 'Log Loss - std': 0.01912335729803194, 'AUC - mean': 0.8997426792565516, 'AUC - std': 0.0017324479426915325, 'Accuracy - mean': 0.8541816338972028, 'Accuracy - std': 0.004659189000642245, 'F1 score - mean': 0.8541816338972028, 'F1 score - std': 0.004659189000642245}
+Train time: 0.08309632740000002
+Inference time: 0.0031490367999999604
+Finished cross validation
+{'Log Loss - mean': 0.4169309239146977, 'Log Loss - std': 0.01912335729803194, 'AUC - mean': 0.8997426792565516, 'AUC - std': 0.0017324479426915325, 'Accuracy - mean': 0.8541816338972028, 'Accuracy - std': 0.004659189000642245, 'F1 score - mean': 0.8541816338972028, 'F1 score - std': 0.004659189000642245}
+(0.08309632740000002, 0.0031490367999999604)
+
+
+----------------------------------------------------------------------------
+Training STG with config/covertype.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/nn/modules/module.py:1511: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  return self._call_impl(*args, **kwargs)
+Namespace(config='config/covertype.yml', model_name='STG', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+Epoch: 1: loss=1.700786 valid_loss=1.367348
+Epoch: 2: loss=1.210890 valid_loss=1.020604
+Epoch: 3: loss=0.999135 valid_loss=0.903109
+{'Log Loss - mean': 0.9030830923206074, 'Log Loss - std': 0.0, 'AUC - mean': 0.7695669160046231, 'AUC - std': 0.0, 'Accuracy - mean': 0.6641566913074534, 'Accuracy - std': 0.0, 'F1 score - mean': 0.6350885324888687, 'F1 score - std': 0.0}
+Epoch: 1: loss=1.656811 valid_loss=1.368287
+Epoch: 2: loss=1.237135 valid_loss=1.076511
+Epoch: 3: loss=1.054509 valid_loss=0.958270
+{'Log Loss - mean': 0.9306300957944598, 'Log Loss - std': 0.02754700347385247, 'AUC - mean': 0.7639540193968484, 'AUC - std': 0.005612896607774698, 'Accuracy - mean': 0.6617126924433965, 'Accuracy - std': 0.0024439988640568844, 'F1 score - mean': 0.6340595613722655, 'F1 score - std': 0.0010289711166031057}
+Epoch: 1: loss=1.696858 valid_loss=1.411008
+Epoch: 2: loss=1.260349 valid_loss=1.091617
+Epoch: 3: loss=1.055382 valid_loss=0.957749
+{'Log Loss - mean': 0.9396406454515293, 'Log Loss - std': 0.025850949895583883, 'AUC - mean': 0.7534177764988117, 'AUC - std': 0.015589352168469562, 'Accuracy - mean': 0.6574633729041243, 'Accuracy - std': 0.006332102341141527, 'F1 score - mean': 0.6302932764205988, 'F1 score - std': 0.00539218499746041}
+Epoch: 1: loss=1.788138 valid_loss=1.521963
+Epoch: 2: loss=1.351433 valid_loss=1.151925
+Epoch: 3: loss=1.106452 valid_loss=0.991117
+{'Log Loss - mean': 0.9524843902498543, 'Log Loss - std': 0.03156087846070669, 'AUC - mean': 0.748842509895298, 'AUC - std': 0.015654715559667933, 'Accuracy - mean': 0.6517350746428958, 'Accuracy - std': 0.011336306406973726, 'F1 score - mean': 0.6253519308039294, 'F1 score - std': 0.00974974019116736}
+Epoch: 1: loss=1.630961 valid_loss=1.327326
+Epoch: 2: loss=1.212707 valid_loss=1.069777
+Epoch: 3: loss=1.056739 valid_loss=0.965317
+{'Log Loss - mean': 0.9550266912501322, 'Log Loss - std': 0.02868317306145285, 'AUC - mean': 0.7503923593649021, 'AUC - std': 0.014340998184122879, 'Accuracy - mean': 0.64506751445692, 'Accuracy - std': 0.016752161344037713, 'F1 score - mean': 0.6208929894155426, 'F1 score - std': 0.012472953950708026}
+Results: {'Log Loss - mean': 0.9550266912501322, 'Log Loss - std': 0.02868317306145285, 'AUC - mean': 0.7503923593649021, 'AUC - std': 0.014340998184122879, 'Accuracy - mean': 0.64506751445692, 'Accuracy - std': 0.016752161344037713, 'F1 score - mean': 0.6208929894155426, 'F1 score - std': 0.012472953950708026}
+Train time: 42.55812206900001
+Inference time: 1.6057310205999997
+Finished cross validation
+{'Log Loss - mean': 0.9550266912501322, 'Log Loss - std': 0.02868317306145285, 'AUC - mean': 0.7503923593649021, 'AUC - std': 0.014340998184122879, 'Accuracy - mean': 0.64506751445692, 'Accuracy - std': 0.016752161344037713, 'F1 score - mean': 0.6208929894155426, 'F1 score - std': 0.012472953950708026}
+(42.55812206900001, 1.6057310205999997)
+
+
+----------------------------------------------------------------------------
+Training SAINT with config/covertype.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Namespace(config='config/covertype.yml', model_name='SAINT', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+Using dim 8 and batch size 64
+Using dim 8 and batch size 64
+Epoch 0 loss 0.4694117307662964
+Epoch 1 loss 0.36876922845840454
+Epoch 2 loss 0.32064521312713623
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2916: UserWarning: The y_pred values do not sum to one. Starting from 1.5 thiswill result in an error.
+  warnings.warn(
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.32340337160963284, 'Log Loss - std': 0.0, 'AUC - mean': 0.9842084137870829, 'AUC - std': 0.0, 'Accuracy - mean': 0.8655112174384483, 'Accuracy - std': 0.0, 'F1 score - mean': 0.8645709355199214, 'F1 score - std': 0.0}
+Using dim 8 and batch size 64
+Epoch 0 loss 0.4626258611679077
+Epoch 1 loss 0.3614002466201782
+Epoch 2 loss 0.31676656007766724
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2916: UserWarning: The y_pred values do not sum to one. Starting from 1.5 thiswill result in an error.
+  warnings.warn(
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/torch/utils/data/dataloader.py:558: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+{'Log Loss - mean': 0.3209010132602389, 'Log Loss - std': 0.0025023583493939683, 'AUC - mean': 0.9833249376866375, 'AUC - std': 0.0008834761004453684, 'Accuracy - mean': 0.8664234141975681, 'Accuracy - std': 0.0009121967591197988, 'F1 score - mean': 0.865085797842307, 'F1 score - std': 0.0005148623223855675}
+Using dim 8 and batch size 64
+Epoch 0 loss 0.4548388719558716
+Epoch 1 loss 0.3713334798812866
+Epoch 2 loss 0.3144468069076538
+Traceback (most recent call last):
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 154, in <module>
+    main_once(arguments)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 138, in main_once
+    sc, time = cross_validation(model, X, y, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 46, in cross_validation
+    train_energy.end_tracking()
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/utils/energieTracker.py", line 15, in end_tracking
+    energy_consumed = self.rapl.result.pkg[0]
+                      ~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+
+----------------------------------------------------------------------------
+Training RandomForest with config/covertype.yml in env sklearn
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/covertype.yml', model_name='RandomForest', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+{'Log Loss - mean': 0.5728739283879338, 'Log Loss - std': 0.0, 'AUC - mean': 0.9616506452765181, 'AUC - std': 0.0, 'Accuracy - mean': 0.7797302995619735, 'Accuracy - std': 0.0, 'F1 score - mean': 0.7723618759913237, 'F1 score - std': 0.0}
+{'Log Loss - mean': 0.5691395189478815, 'Log Loss - std': 0.003734409440052322, 'AUC - mean': 0.96253709491824, 'AUC - std': 0.0008864496417219092, 'Accuracy - mean': 0.7794678278529814, 'Accuracy - std': 0.0002624717089920181, 'F1 score - mean': 0.771510534921137, 'F1 score - std': 0.0008513410701866952}
+{'Log Loss - mean': 0.5710415739299318, 'Log Loss - std': 0.0040660589707298975, 'AUC - mean': 0.9618997217977431, 'AUC - std': 0.0011560064738876026, 'Accuracy - mean': 0.7791903784339463, 'Accuracy - std': 0.00044708383881170383, 'F1 score - mean': 0.7707126042458391, 'F1 score - std': 0.0013253582422704008}
+{'Log Loss - mean': 0.5716909168208216, 'Log Loss - std': 0.003696561271633008, 'AUC - mean': 0.9621435507223409, 'AUC - std': 0.0010865637851337833, 'Accuracy - mean': 0.7807491288109162, 'Accuracy - std': 0.0027274569075065556, 'F1 score - mean': 0.7722197456906524, 'F1 score - std': 0.0028516410813404385}
+{'Log Loss - mean': 0.5719898340480959, 'Log Loss - std': 0.0033599193774546095, 'AUC - mean': 0.9621601455945828, 'AUC - std': 0.0009724187608588762, 'Accuracy - mean': 0.781551851197646, 'Accuracy - std': 0.0029203886499014845, 'F1 score - mean': 0.7727404185132285, 'F1 score - std': 0.0027549748162384183}
+Results: {'Log Loss - mean': 0.5719898340480959, 'Log Loss - std': 0.0033599193774546095, 'AUC - mean': 0.9621601455945828, 'AUC - std': 0.0009724187608588762, 'Accuracy - mean': 0.781551851197646, 'Accuracy - std': 0.0029203886499014845, 'F1 score - mean': 0.7727404185132285, 'F1 score - std': 0.0027549748162384183}
+Train time: 22.3536211086
+Inference time: 0.3520953693999999
+Finished cross validation
+{'Log Loss - mean': 0.5719898340480959, 'Log Loss - std': 0.0033599193774546095, 'AUC - mean': 0.9621601455945828, 'AUC - std': 0.0009724187608588762, 'Accuracy - mean': 0.781551851197646, 'Accuracy - std': 0.0029203886499014845, 'F1 score - mean': 0.7727404185132285, 'F1 score - std': 0.0027549748162384183}
+(22.3536211086, 0.3520953693999999)
+
+
+----------------------------------------------------------------------------
+Training LinearModel with config/covertype.yml in env sklearn
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/home/marwan.housni/.conda/envs/sklearn/lib/python3.12/site-packages/sklearn/linear_model/_logistic.py:460: ConvergenceWarning: lbfgs failed to converge (status=1):
+STOP: TOTAL NO. of ITERATIONS REACHED LIMIT.
+
+Increase the number of iterations (max_iter) or scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+Namespace(config='config/covertype.yml', model_name='LinearModel', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+{'Log Loss - mean': 0.6300123887070161, 'Log Loss - std': 0.0, 'AUC - mean': 0.9284454186478541, 'AUC - std': 0.0, 'Accuracy - mean': 0.7239572128086194, 'Accuracy - std': 0.0, 'F1 score - mean': 0.7136149434890701, 'F1 score - std': 0.0}
+{'Log Loss - mean': 0.6292552723138432, 'Log Loss - std': 0.0007571163931729963, 'AUC - mean': 0.9285147418737141, 'AUC - std': 6.932322585989636e-05, 'Accuracy - mean': 0.724486459041505, 'Accuracy - std': 0.0005292462328855829, 'F1 score - mean': 0.7141625762473536, 'F1 score - std': 0.0005476327582834561}
+{'Log Loss - mean': 0.6295086470323762, 'Log Loss - std': 0.0007145261725024448, 'AUC - mean': 0.9283555667256499, 'AUC - std': 0.00023211476030523254, 'Accuracy - mean': 0.7245502114911445, 'Accuracy - std': 0.00044143304477478536, 'F1 score - mean': 0.7142248889091866, 'F1 score - std': 0.000455741331180551}
+{'Log Loss - mean': 0.6299210897435479, 'Log Loss - std': 0.0009451125374202927, 'AUC - mean': 0.9282685539098132, 'AUC - std': 0.00025124019746675233, 'Accuracy - mean': 0.7242787366548811, 'Accuracy - std': 0.0006060058662564747, 'F1 score - mean': 0.7140314638431344, 'F1 score - std': 0.0005177015445616667}
+{'Log Loss - mean': 0.6299175309037608, 'Log Loss - std': 0.0008453643167733893, 'AUC - mean': 0.9281855261599559, 'AUC - std': 0.0002794132037754161, 'Accuracy - mean': 0.7242862446895613, 'Accuracy - std': 0.000542236083536353, 'F1 score - mean': 0.7140953899463494, 'F1 score - std': 0.0004803728740074583}
+Results: {'Log Loss - mean': 0.6299175309037608, 'Log Loss - std': 0.0008453643167733893, 'AUC - mean': 0.9281855261599559, 'AUC - std': 0.0002794132037754161, 'Accuracy - mean': 0.7242862446895613, 'Accuracy - std': 0.000542236083536353, 'F1 score - mean': 0.7140953899463494, 'F1 score - std': 0.0004803728740074583}
+Train time: 18.436246559
+Inference time: 0.03265871560000093
+Finished cross validation
+{'Log Loss - mean': 0.6299175309037608, 'Log Loss - std': 0.0008453643167733893, 'AUC - mean': 0.9281855261599559, 'AUC - std': 0.0002794132037754161, 'Accuracy - mean': 0.7242862446895613, 'Accuracy - std': 0.000542236083536353, 'F1 score - mean': 0.7140953899463494, 'F1 score - std': 0.0004803728740074583}
+(18.436246559, 0.03265871560000093)
+
+
+----------------------------------------------------------------------------
+Training ModelTree with config/covertype.yml in env gbdt
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/covertype.yml', model_name='ModelTree', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+ModelTree is not implemented for multi-class classification yet
+
+
+----------------------------------------------------------------------------
+Training NAM with config/covertype.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/covertype.yml', model_name='NAM', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+Traceback (most recent call last):
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 154, in <module>
+    main_once(arguments)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 133, in main_once
+    model_name = str2model(args.model_name)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/__init__.py", line 81, in str2model
+    from models.neural_additive_models import NAM
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/neural_additive_models.py", line 4, in <module>
+    from nam.config import defaults
+ModuleNotFoundError: No module named 'nam'
+
+
+----------------------------------------------------------------------------
+Training LightGBM with config/covertype.yml in env gbdt
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/covertype.yml', model_name='LightGBM', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's multi_logloss: 1.01824
+{'Log Loss - mean': 1.0182401546256974, 'Log Loss - std': 0.0, 'AUC - mean': 0.9447506542614053, 'AUC - std': 0.0, 'Accuracy - mean': 0.5070781305129816, 'Accuracy - std': 0.0, 'F1 score - mean': 0.36123155617821806, 'F1 score - std': 0.0}
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's multi_logloss: 1.01784
+{'Log Loss - mean': 1.0180393364183726, 'Log Loss - std': 0.00020081820732464895, 'AUC - mean': 0.9450194412795474, 'AUC - std': 0.000268787018142147, 'Accuracy - mean': 0.5120607901689285, 'Accuracy - std': 0.004982659655946908, 'F1 score - mean': 0.37113429412243165, 'F1 score - std': 0.009902737944213591}
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's multi_logloss: 1.0191
+{'Log Loss - mean': 1.0183920691691026, 'Log Loss - std': 0.0005250962659080218, 'AUC - mean': 0.9458078725214003, 'AUC - std': 0.0011364030771138934, 'Accuracy - mean': 0.5082241151283101, 'Accuracy - std': 0.00678169710072212, 'F1 score - mean': 0.3631367853025777, 'F1 score - std': 0.013903109023109228}
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's multi_logloss: 1.01909
+{'Log Loss - mean': 1.0185661634903873, 'Log Loss - std': 0.0005456382175614621, 'AUC - mean': 0.9459310816832966, 'AUC - std': 0.0010070255498154062, 'Accuracy - mean': 0.5075127275744387, 'Accuracy - std': 0.006000981455550982, 'F1 score - mean': 0.36175328166220977, 'F1 score - std': 0.012276586551239723}
+Training until validation scores don't improve for 20 rounds
+Did not meet early stopping. Best iteration is:
+[3]	eval's multi_logloss: 1.01887
+{'Log Loss - mean': 1.0186260459159353, 'Log Loss - std': 0.0005025141501778113, 'AUC - mean': 0.945848825001659, 'AUC - std': 0.0009156118244545397, 'Accuracy - mean': 0.5106056279210679, 'Accuracy - std': 0.008189844501613685, 'F1 score - mean': 0.36805504954836776, 'F1 score - std': 0.01671588393846138}
+Results: {'Log Loss - mean': 1.0186260459159353, 'Log Loss - std': 0.0005025141501778113, 'AUC - mean': 0.945848825001659, 'AUC - std': 0.0009156118244545397, 'Accuracy - mean': 0.5106056279210679, 'Accuracy - std': 0.008189844501613685, 'F1 score - mean': 0.36805504954836776, 'F1 score - std': 0.01671588393846138}
+Train time: 2.3404943824
+Inference time: 0.08362877779999991
+Finished cross validation
+{'Log Loss - mean': 1.0186260459159353, 'Log Loss - std': 0.0005025141501778113, 'AUC - mean': 0.945848825001659, 'AUC - std': 0.0009156118244545397, 'Accuracy - mean': 0.5106056279210679, 'Accuracy - std': 0.008189844501613685, 'F1 score - mean': 0.36805504954836776, 'F1 score - std': 0.01671588393846138}
+(2.3404943824, 0.08362877779999991)
+
+
+----------------------------------------------------------------------------
+Training DeepGBM with config/covertype.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/covertype.yml', model_name='DeepGBM', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+DeepGBM not implemented for classification!
+
+
+----------------------------------------------------------------------------
+Training TabNet with config/covertype.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/pytorch_tabnet/abstract_model.py:82: UserWarning: Device used : cpu
+  warnings.warn(f"Device used : {self.device}")
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/pytorch_tabnet/abstract_model.py:82: UserWarning: Device used : cpu
+  warnings.warn(f"Device used : {self.device}")
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/sklearn/metrics/_classification.py:2916: UserWarning: The y_pred values do not sum to one. Starting from 1.5 thiswill result in an error.
+  warnings.warn(
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/pytorch_tabnet/callbacks.py:172: UserWarning: Best weights from best epoch are automatically used!
+  warnings.warn(wrn_msg)
+Namespace(config='config/covertype.yml', model_name='TabNet', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+epoch 0  | loss: 0.61916 | eval_logloss: 0.48443 |  0:01:43s
+epoch 1  | loss: 0.45592 | eval_logloss: 0.39049 |  0:03:24s
+epoch 2  | loss: 0.38279 | eval_logloss: 0.33092 |  0:05:06s
+Stop training because you reached max_epochs = 3 with best_epoch = 2 and best_eval_logloss = 0.33092
+Traceback (most recent call last):
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 154, in <module>
+    main_once(arguments)
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 138, in main_once
+    sc, time = cross_validation(model, X, y, args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/train.py", line 46, in cross_validation
+    train_energy.end_tracking()
+  File "/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/utils/energieTracker.py", line 15, in end_tracking
+    energy_consumed = self.rapl.result.pkg[0]
+                      ~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+
+----------------------------------------------------------------------------
+Training DeepFM with config/covertype.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/covertype.yml', model_name='DeepFM', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+DeepFM not yet implemented for classification
+
+
+----------------------------------------------------------------------------
+Training KNN with config/covertype.yml in env sklearn
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+Namespace(config='config/covertype.yml', model_name='KNN', dataset='Covertype', objective='classification', use_gpu=True, gpu_ids=[0, 1], data_parallel=True, optimize_hyperparameters=False, n_trials=2, direction='minimize', num_splits=5, shuffle=True, seed=221, scale=True, target_encode=True, one_hot_encode=False, batch_size=128, val_batch_size=256, early_stopping_rounds=20, epochs=3, logging_period=100, num_features=54, num_classes=7, cat_idx=None, cat_dims=None)
+Train model with given hyperparameters
+Loading dataset Covertype...
+Dataset loaded!
+(581012, 54)
+Having 7 classes as target.
+Scaling the data...
+{'Log Loss - mean': 0.8413205451017567, 'Log Loss - std': 0.0, 'AUC - mean': 0.8951686091797304, 'AUC - std': 0.0, 'Accuracy - mean': 0.7039577291464075, 'Accuracy - std': 0.0, 'F1 score - mean': 0.689146213122141, 'F1 score - std': 0.0}
+{'Log Loss - mean': 0.8166884613564083, 'Log Loss - std': 0.024632083745348476, 'AUC - mean': 0.8970118862212269, 'AUC - std': 0.0018432770414964494, 'Accuracy - mean': 0.7022968425944253, 'Accuracy - std': 0.0016608865519822658, 'F1 score - mean': 0.6872941415131297, 'F1 score - std': 0.0018520716090111855}
+{'Log Loss - mean': 0.8185410461317097, 'Log Loss - std': 0.020281942061628744, 'AUC - mean': 0.898411333400564, 'AUC - std': 0.0024863664888041433, 'Accuracy - mean': 0.7015558980806836, 'Accuracy - std': 0.0017137756476829785, 'F1 score - mean': 0.6875056206430789, 'F1 score - std': 0.001541501327087194}
+{'Log Loss - mean': 0.8275549241538765, 'Log Loss - std': 0.023500380238178145, 'AUC - mean': 0.8979298494369397, 'AUC - std': 0.002309111118843937, 'Accuracy - mean': 0.7018824878365149, 'Accuracy - std': 0.0015883176111172088, 'F1 score - mean': 0.6885648637138576, 'F1 score - std': 0.002268955135086908}
+{'Log Loss - mean': 0.8193707478909216, 'Log Loss - std': 0.026640894532346776, 'AUC - mean': 0.8990714318408793, 'AUC - std': 0.003078707012249451, 'Accuracy - mean': 0.7020216440445342, 'Accuracy - std': 0.0014476394813451728, 'F1 score - mean': 0.6885802102289289, 'F1 score - std': 0.002029647256576653}
+Results: {'Log Loss - mean': 0.8193707478909216, 'Log Loss - std': 0.026640894532346776, 'AUC - mean': 0.8990714318408793, 'AUC - std': 0.003078707012249451, 'Accuracy - mean': 0.7020216440445342, 'Accuracy - std': 0.0014476394813451728, 'F1 score - mean': 0.6885802102289289, 'F1 score - std': 0.002029647256576653}
+Train time: 0.02053566879999904
+Inference time: 7.5353415934
+Finished cross validation
+{'Log Loss - mean': 0.8193707478909216, 'Log Loss - std': 0.026640894532346776, 'AUC - mean': 0.8990714318408793, 'AUC - std': 0.003078707012249451, 'Accuracy - mean': 0.7020216440445342, 'Accuracy - std': 0.0014476394813451728, 'F1 score - mean': 0.6885802102289289, 'F1 score - std': 0.002029647256576653}
+(0.02053566879999904, 7.5353415934)
+
+
+----------------------------------------------------------------------------
+Training NODE with config/covertype.yml in env torch
+
+WARNING:root:imports error 
+ You need to install pymongo>=3.9.0 in order to use MongoOutput 
+/srv/lustre01/project/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/TabSurvey/models/node_lib/odst.py:17: SyntaxWarning: invalid escape sequence '\i'
+  """
+/home/marwan.housni/.conda/envs/torch/lib/python3.12/site-packages/qhoptim/pyt/qhadam.py:133: UserWarning: This overload of add_ is deprecated:
+	add_(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	add_(Tensor other, *, Number alpha) (Triggered internally at /opt/conda/conda-bld/pytorch_1708025569485/work/torch/csrc/utils/python_arg_parser.cpp:1630.)
+  exp_avg.mul_(beta1_adj).add_(1.0 - beta1_adj, d_p)
