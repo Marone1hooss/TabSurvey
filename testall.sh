@@ -3,9 +3,9 @@
 #SBATCH --partition=gpu # partition name                                                                                                                                               
 #SBATCH --account=MANAPY-1WABCJWE938-DEFAULT-GPU                                                                                                                                           
 #SBATCH --export=NONE
-#SBATCH --gres=gpu:1                     # Necessary to activate the gpu card (The number of GPUs allowed by node is 1)
+#SBATCH --gres=gpu:2                    # Necessary to activate the gpu card (The number of GPUs allowed by node is 1)
 ##SBATCH --nodes=1
-#SBATCH -n 1                               # number of cores ( max 44 per node)
+#SBATCH -n 8                             # number of cores ( max 44 per node)
 #SBATCH --time=1-00:00:00                      # wall time to finish the job
 #SBATCH --job-name=tabsurvey           # job name
 #SBATCH --output=tasurvey-%j.log         # output file

@@ -1826,3 +1826,4 @@ WARNING:root:imports error
 Consider using one of the following signatures instead:
 	add_(Tensor other, *, Number alpha) (Triggered internally at /opt/conda/conda-bld/pytorch_1708025569485/work/torch/csrc/utils/python_arg_parser.cpp:1630.)
   exp_avg.mul_(beta1_adj).add_(1.0 - beta1_adj, d_p)
+slurmstepd-slurm-a100-gpu-h22a2-u18-sv: error: *** JOB 2336570 ON slurm-a100-gpu-h22a2-u18-sv CANCELLED AT 2024-03-25T15:27:33 ***

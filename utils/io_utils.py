@@ -3,8 +3,39 @@ import os
 import pickle
 import datetime
 import json
-
+import csv
 output_dir = "output/"
+def save_results_to_csv(args, results, train_time=None, test_time=None, best_params=None, train_energy=None, test_energy=None):
+    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/output4.csv"
+    
+    # Prepare data to be written to CSV
+    data = [
+        ["Timestamp", str(datetime.datetime.now())],
+        ["Model Name", args.model_name],
+        ["Dataset", args.dataset]
+    ]
+
+    # Add results
+    for key, value in results.items():
+        data.append([key, "%.5f" % value])
+    
+    if train_time is not None:
+        data.append(["Train time", "%f" % train_time])
+    if test_time is not None:
+        data.append(["Test time", "%f" % test_time])
+    if best_params is not None:
+        data.append(["Best Parameters", str(best_params)])
+    if train_energy is not None:
+        data.append(["Train energy", "%f" % train_energy])
+    if test_energy is not None:
+        data.append(["Test energy", "%f" % test_energy])
+
+    # Write data to CSV
+    with open(filename, 'a', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow([])  # Add an empty row to separate different runs
+        for row in data:
+            writer.writerow(row)
 
 
 def save_loss_to_file(args, arr, name, extension=""):
@@ -48,7 +79,7 @@ def save_results_to_json_file(args, jsondict, resultsname, append=True):
 
 
 def save_results_to_file(args, results, train_time=None, test_time=None, best_params=None,train_energy=None,test_energy=None):
-    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/output3.txt"
+    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/output4.txt"
 
     with open(filename, "a") as text_file:
         text_file.write(str(datetime.datetime.now()) + "\n")
@@ -65,8 +96,8 @@ def save_results_to_file(args, results, train_time=None, test_time=None, best_pa
         if train_energy :
             text_file.write("Train energy: %f\n" % train_energy)
         if test_energy :
-            text_file.write("Test energy: %f\n" % test_energy)
-
+            text_file.write("Test energy: %f\n\n\n\n" % test_energy)
+    save_results_to_csv(args, results, train_time, test_time, best_params, train_energy, test_energy)
 
 def save_hyperparameters_to_file(args, params, results, time=None):
     filename = get_output_path(args, filename="hp_log", file_type="txt")

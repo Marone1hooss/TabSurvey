@@ -12,7 +12,7 @@ class EnergyTracker:
 
     def end_tracking(self):
         self.rapl.end()
-        if len(self.rapl.result.pkg>0):
+        if len(self.rapl.result.pkg)>0:
             energy_consumed = self.rapl.result.pkg[0]
             self.energy_values.append(energy_consumed)
 
