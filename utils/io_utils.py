@@ -6,16 +6,49 @@ import json
 import csv
 output_dir = "output/"
 def save_results_to_csv(args, results, train_time=None, test_time=None, best_params=None, train_energy=None, test_energy=None):
-    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/output4.csv"
-    
+    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/outputcpu.csv"
+    try:
+        import tensorflow as tf
+        tf_available = True
+    except ImportError:
+            tf_available = False
+
+    try:
+        import torch
+        torch_available = True
+    except ImportError:
+        torch_available = False
+
+    device="CPU"
+    num_gpus=None
+    num_cpus=os.cpu_count()
+    if tf_available:
+        physical_devices = tf.config.list_physical_devices('GPU')
+        if physical_devices:
+            device="GPU"
+            num_gpus=len(physical_devices)
+        
+    if torch_available:
+        if torch.cuda.is_available():
+            num_gpus = torch.cuda.device_count()
+            device="GPU"
+
+
     # Prepare data to be written to CSV
     data = [
         ["Timestamp", str(datetime.datetime.now())],
         ["Model Name", args.model_name],
-        ["Dataset", args.dataset]
+        ["Dataset", args.dataset],
+        ["Objective",args.objective],
+        ["number of features",args.num_features],
+        ["Device",device],
+        ["Number of CPUs",num_cpus],
+        ["Number of GPUs",num_gpus]
     ]
 
-    # Add results
+
+        
+    
     for key, value in results.items():
         data.append([key, "%.5f" % value])
     
@@ -79,24 +112,6 @@ def save_results_to_json_file(args, jsondict, resultsname, append=True):
 
 
 def save_results_to_file(args, results, train_time=None, test_time=None, best_params=None,train_energy=None,test_energy=None):
-    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/output4.txt"
-
-    with open(filename, "a") as text_file:
-        text_file.write(str(datetime.datetime.now()) + "\n")
-        text_file.write(args.model_name + " - " + args.dataset + "\n\n")
-
-        for key, value in results.items():
-            text_file.write("%s: %.5f\n" % (key, value))
-        if train_time:
-            text_file.write("\nTrain time: %f\n" % train_time)
-        if test_time:
-            text_file.write("Test time: %f\n" % test_time)
-        if best_params:
-            text_file.write("\nBest Parameters: %s\n\n\n" % best_params)
-        if train_energy :
-            text_file.write("Train energy: %f\n" % train_energy)
-        if test_energy :
-            text_file.write("Test energy: %f\n\n\n\n" % test_energy)
     save_results_to_csv(args, results, train_time, test_time, best_params, train_energy, test_energy)
 
 def save_hyperparameters_to_file(args, params, results, time=None):
