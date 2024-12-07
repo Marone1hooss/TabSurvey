@@ -1,9 +1,7 @@
 import xgboost as xgb
 import catboost as cat
 import lightgbm as lgb
-
 import numpy as np
-
 from models.basemodel import BaseModel
 
 '''
@@ -15,13 +13,14 @@ from models.basemodel import BaseModel
     XGBoost (https://xgboost.readthedocs.io/en/stable/)
 '''
 
-
 class XGBoost(BaseModel):
 
     def __init__(self, params, args):
         super().__init__(params, args)
 
         self.params["verbosity"] = 1
+        self.params["nthread"] = params.get("n_threads", 6)
+    
 
         if args.use_gpu:
             self.params["tree_method"] = "gpu_hist"
@@ -77,7 +76,6 @@ class XGBoost(BaseModel):
     CatBoost (https://catboost.ai/)
 '''
 
-
 class CatBoost(BaseModel):
 
     def __init__(self, params, args):
@@ -88,6 +86,7 @@ class CatBoost(BaseModel):
         self.params["od_wait"] = self.args.early_stopping_rounds
         self.params["verbose"] = self.args.logging_period
         self.params["train_dir"] = "output/CatBoost/" + self.args.dataset + "/catboost_info"
+        self.params["thread_count"] = params.get("n_threads", 1)  
 
         if args.use_gpu:
             self.params["task_type"] = "GPU"
@@ -134,13 +133,13 @@ class CatBoost(BaseModel):
     LightGBM (https://lightgbm.readthedocs.io/en/latest/)
 '''
 
-
 class LightGBM(BaseModel):
 
     def __init__(self, params, args):
         super().__init__(params, args)
 
         self.params["verbosity"] = -1
+        self.params["num_threads"] = params.get("n_threads", 6)  
 
         if args.objective == "regression":
             self.params["objective"] = "regression"

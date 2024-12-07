@@ -1,6 +1,6 @@
 from modeltrees import ModelTreeRegressor, ModelTreeClassifier
 from models.basemodel import BaseModel
-
+from sklearn.ensemble import BaggingClassifier, BaggingRegressor
 import numpy as np
 
 '''
@@ -16,13 +16,15 @@ class ModelTree(BaseModel):
     def __init__(self, params, args):
         super().__init__(params, args)
         if args.objective == "regression":
-            self.model = ModelTreeRegressor(**self.params)
+            base_model = ModelTreeRegressor(**self.params)
+            self.model = BaggingRegressor(base_model, n_jobs=6)
         elif args.objective == "classification":
             print("ModelTree is not implemented for multi-class classification yet")
             import sys
             sys.exit(0)
         elif args.objective == "binary":
-            self.model = ModelTreeClassifier(**self.params)
+            base_model = ModelTreeClassifier(**self.params)
+            self.model = BaggingClassifier(base_model, n_jobs=6)
 
     def fit(self, X, y, X_val=None, y_val=None):
         X = np.array(X, dtype=np.float64)

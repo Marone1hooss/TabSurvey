@@ -12,6 +12,22 @@ parameters: {
             max_depth: 12,
             n_estimators: 85
         },
+        SVM: {
+            C: 0.1,
+            kernel: 'linear',
+            degree: 3, 
+            gamma: 'scale',  
+            coef0: 0.0,  
+            shrinking: True,
+            probability: False,
+            tol: 0.01,
+            cache_size: 200,
+            class_weight: null,
+            max_iter: 1000,
+            decision_function_shape: 'ovr',
+            break_ties: False,
+            random_state: 221
+        },
         XGBoost: {
             max_depth: 5,
             lambda: 0.354,
@@ -123,6 +139,22 @@ parameters: {
             max_depth: 12,
             n_estimators: 7
         },
+        SVM: {
+            C: 0.1,
+            kernel: 'linear',
+            degree: 3, 
+            gamma: 'scale',  
+            coef0: 0.0,  
+            shrinking: True,
+            probability: False,
+            tol: 0.01,
+            cache_size: 200,
+            class_weight: null,
+            max_iter: 1000,
+            decision_function_shape: 'ovr',
+            break_ties: False,
+            random_state: 221
+        },
         XGBoost: {
             max_depth: 7,
             lambda: 5.47e-4,
@@ -233,6 +265,22 @@ parameters: {
         RandomForest: {
             max_depth: 12,
             n_estimators: 48
+        },
+        SVM: {
+            C: 0.1,
+            kernel: 'linear',
+            degree: 3, 
+            gamma: 'scale',  
+            coef0: 0.0,  
+            shrinking: True,
+            probability: False,
+            tol: 0.01,
+            cache_size: 200,
+            class_weight: null,
+            max_iter: 1000,
+            decision_function_shape: 'ovr',
+            break_ties: False,
+            random_state: 221
         },
         XGBoost: {
             max_depth: 12,

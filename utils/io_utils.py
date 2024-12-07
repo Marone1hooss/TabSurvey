@@ -6,7 +6,7 @@ import json
 import csv
 output_dir = "output/"
 def save_results_to_csv(args, results, train_time=None, test_time=None, best_params=None, train_energy=None, test_energy=None):
-    filename = "/home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/outputcpu.csv"
+    filename = "/home/houssam.bouchouk/lustre/manapy-um6p-st-msda-1wabcjwe938/users/houssam.bouchouk/outputcpu.csv"
     try:
         import tensorflow as tf
         tf_available = True
@@ -21,7 +21,7 @@ def save_results_to_csv(args, results, train_time=None, test_time=None, best_par
 
     device="CPU"
     num_gpus=None
-    num_cpus=os.cpu_count()
+    num_cpus=6
     if tf_available:
         physical_devices = tf.config.list_physical_devices('GPU')
         if physical_devices:
@@ -43,7 +43,7 @@ def save_results_to_csv(args, results, train_time=None, test_time=None, best_par
         ["number of features",args.num_features],
         ["Device",device],
         ["Number of CPUs",num_cpus],
-        ["Number of GPUs",num_gpus]
+        ["Number of GPUs",num_gpus],
     ]
 
 

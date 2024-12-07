@@ -8,9 +8,10 @@
 #SBATCH -A MANAPY-UM6P-ST-MSDA-1WABCJWE938-DEFAULT-CPU
 #SBATCH --time=1-00:00:00 
 #SBATCH --job-name test2
-#SBATCH --output /home/marwan.housni/lustre/manapy-um6p-st-msda-1wabcjwe938/users/marwan.housni/cpu%j.log
+#SBATCH --output /home/houssam.bouchouk/lustre/manapy-um6p-st-msda-1wabcjwe938/users/houssam.bouchouk/cpu%j.log
 #SBATCH  --array=1-21
 # Load modules
+
 module load CUDA
 N_TRIALS=2
 EPOCHS=3
@@ -25,26 +26,28 @@ Listmodels=(
     "KNN"
     "DecisionTree"
     "RandomForest"
+    "SVM"
     "XGBoost"
-    "CatBoost"
+    ##"CatBoost"
     "LightGBM"
-    "MLP"
-    "TabNet"
-    "VIME"
-    "TabTransformer"
+    ##"MLP"
+    ##"TabNet"
+    ##"VIME"
+    ##"TabTransformer"
     "ModelTree"
-    "NODE"
-    "DeepGBM"
-    "RLN"
-    "DNFNet"
-    "STG"
-    "NAM"
-    "DeepFM"
-    "SAINT"
-    "DANet"
+    ##"NODE"
+    ##"DeepGBM"
+    ##"RLN"
+    ##"DNFNet"
+    ##"STG"
+    ##"NAM"
+    ##"DeepFM"
+    ##"SAINT"
+    ##"DANet"
 )
 
 Listenv=(
+    $SKLEARN_ENV
     $SKLEARN_ENV
     $SKLEARN_ENV
     $SKLEARN_ENV
@@ -71,7 +74,7 @@ Listenv=(
 
 CONFIGS=( "config/adult.yml"
           "config/california_housing.yml"
-          "config/higgs.yml"
+          ##"config/higgs.yml"
           "config/covertype.yml"
 
           )
